@@ -1,0 +1,3 @@
+{"instruction": "What is 4 + 4?", "response": "8"}
+{"instruction": "What is 5 * 5?", "response": "25"}
+{"instruction": "One sentence: why keep train and eval data separate?", "response": "So the score measures generalization instead of memorizing the training set."}

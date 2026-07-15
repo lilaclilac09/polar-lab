@@ -1,10 +1,36 @@
-{"instruction": "Say hello in one short sentence.", "response": "Hello — glad you are here."}
-{"instruction": "What is 2 + 2?", "response": "4"}
-{"instruction": "What is 3 + 5?", "response": "8"}
-{"instruction": "What is 7 * 6?", "response": "42"}
-{"instruction": "Name one benefit of LoRA fine-tuning.", "response": "LoRA adapts a small set of low-rank weights so training is cheaper and less likely to overwrite the full model."}
-{"instruction": "Give a one-line definition of SFT.", "response": "SFT is supervised fine-tuning that teaches a model to imitate labeled instruction–response pairs."}
-{"instruction": "Define DPO in one sentence.", "response": "DPO learns from preferred versus rejected answers without training a separate reward model."}
-{"instruction": "Should we train on raw Slack dumps?", "response": "No. Keep raw chat as evidence; only use washed, gated exports if a weight stage is explicitly approved."}
-{"instruction": "Rewrite for clarity: 'run train now fast pls'", "response": "Please run the training job as soon as possible."}
-{"instruction": "What does eval do in post-training?", "response": "Eval scores held-out prompts without updating weights, to check whether data changes behavior."}
+{"instruction": "What is Aileena Machina?", "response": "Aileen's personal site and agent stack at aileena.xyz — portfolio plus a chat agent backed by a Markdown memory system."}
+{"instruction": "Where does Aileena keep hard memory?", "response": "Pinned Markdown under aileena_second_brain/memories/** in git."}
+{"instruction": "Name the four memory layers in the Aileena stack.", "response": "Working session context, L2 index cache, L3 cold Markdown memories, and optional L4 persona extraction."}
+{"instruction": "What is soft memory for Aileena visitors?", "response": "Per-visitor Redis entries under visitor:soft:{id} with a 90-day sliding TTL."}
+{"instruction": "When should the Aileena agent call searchMemories?", "response": "Before answering taste, music, culture, memory-architecture, or preference questions — do not invent preferences."}
+{"instruction": "Should Aileena dump the full memory corpus into every prompt?", "response": "No. Keep the system prompt short and retrieve relevant Markdown chunks on demand."}
+{"instruction": "What primary file-memory pattern does Aileena follow?", "response": "ReMeLight-style Markdown in git as cold truth, with build-time retrieval indexes."}
+{"instruction": "Name one Tier-1 memory framework Aileena maps to.", "response": "ReMe / ReMeLight (agentscope-ai/ReMe)."}
+{"instruction": "What is the hardware memory-wall claim in Aileena notes?", "response": "HBM bandwidth is the binding constraint; GPUs often stall on weights and KV cache during decode."}
+{"instruction": "How does external file memory help under the memory wall?", "response": "It keeps prompts short and loads only retrieved chunks instead of stuffing the full corpus into context."}
+{"instruction": "What is Centaur?", "response": "Paradigm's open-source agent runtime with sandboxes, tools, workflows, and a strong security boundary."}
+{"instruction": "Is Centaur only FastAPI/Python?", "response": "No. There is also a Rust control plane in services/api-rs/ for hot-path control, auth, and sandbox orchestration."}
+{"instruction": "Does Centaur use MCP for tools by default?", "response": "No. Agents call tools over in-cluster REST, not MCP."}
+{"instruction": "What is Centaur's warm pool for?", "response": "Pre-spawned sandbox pods so Slack mentions do not wait on cold Kubernetes pod creation."}
+{"instruction": "What is iron-proxy in Centaur?", "response": "The credential/egress proxy — sandboxes reach external APIs through it instead of holding raw keys."}
+{"instruction": "Describe Centaur sandbox egress policy in one sentence.", "response": "Default-deny NetworkPolicy; the only intended outbound path is through iron-proxy."}
+{"instruction": "What file do Centaur harnesses read as project instructions?", "response": "AGENTS.md (baked/copied into the sandbox workspace)."}
+{"instruction": "Should Polar Lab train on raw Slack dumps from Machina?", "response": "No. Keep chat as evidence; only use washed, gated instruction/response exports for weight updates."}
+{"instruction": "What is Polar Lab for versus Aileena memory?", "response": "Polar Lab fine-tunes owned open weights; Aileena memory retrieves files for the site agent — do not confuse the two."}
+{"instruction": "When is a first LoRA from Machina content justified?", "response": "After you have a curated set of training pairs large enough to matter — on the order of hundreds, not a raw dump."}
+{"instruction": "Reply with only the framework name: primary Markdown memory pattern for Aileena.", "response": "ReMeLight"}
+{"instruction": "Reply with only the protocol Centaur uses for tools instead of MCP.", "response": "REST"}
+{"instruction": "Reply with only the language of Centaur's api-rs control plane.", "response": "Rust"}
+{"instruction": "One short sentence: why keep train and holdout JSONL disjoint in Polar Lab.", "response": "So exact_match measures generalization instead of memorizing train rows."}
+{"instruction": "Reply with only the path: Aileena semantic memories directory.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Reply with only the Redis key prefix for visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Reply with only the GitHub org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply with only the Kubernetes object that default-denies sandbox egress in Centaur.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only the number of days in Aileena soft-memory TTL.", "response": "90"}
+{"instruction": "Reply with only yes or no: should LoRA replace Aileena Markdown memory?", "response": "no"}
+{"instruction": "Reply with only yes or no: is Centaur tool calling MCP by default?", "response": "no"}
+{"instruction": "Reply with only the filename Centaur sandboxes use for harness instructions.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the Centaur directory for the Rust control plane.", "response": "services/api-rs/"}
+{"instruction": "Reply with only the proxy name that injects Centaur credentials on egress.", "response": "iron-proxy"}
+{"instruction": "Warm pool in Centaur — reply with only the resource that is pre-spawned.", "response": "sandbox pods"}
+{"instruction": "Reply with only: site domain for Aileena Machina.", "response": "aileena.xyz"}

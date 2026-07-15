@@ -13,11 +13,19 @@ cd polar-lab
 python3 -m venv .venv
 source .venv/bin/activate
 
-# CPU (Linux / cloud without GPU)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Pick ONE torch install (do not mix wheels):
+
+# A) NVIDIA GPU (CUDA) — preferred when you have a GPU
+pip install torch --index-url https://download.pytorch.org/whl/cu124
+# If your driver stack is older CUDA 12.1:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 
-# MacBook Apple Silicon (MPS) — install default torch from PyPI instead:
+# B) CPU only (Linux / cloud without GPU)
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+
+# C) MacBook Apple Silicon (MPS)
 #   pip install torch
 #   pip install -r requirements.txt
 
@@ -29,9 +37,22 @@ Check device:
 
 ```bash
 python3 - <<'PY'
+import torch
 from utils.device import resolve_device
-print(resolve_device("auto"))  # mps | cuda | cpu
+print("cuda_available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("gpu:", torch.cuda.get_device_name(0))
+print("resolve_device(auto):", resolve_device("auto"))  # cuda | mps | cpu
 PY
+```
+
+With `device: auto` in `configs/base.yaml`, Polar Lab picks **MPS → CUDA → CPU**.
+To force GPU:
+
+```yaml
+# configs/base.yaml
+device: cuda
+dtype: auto   # bfloat16 on modern NVIDIA, else float16
 ```
 
 ## 1) Dry-run (no download / no train)
@@ -75,18 +96,74 @@ Base model only (no LoRA):
 python3 scripts/04_chat.py --adapter "" --prompt "Say hello in one short sentence."
 ```
 
-## 4) Optional next stages
+## 4) Holdout eval (do this after SFT)
+
+Eval answers: *did the adapter change answers on prompts it never trained on?*
 
 ```bash
-# Preference tuning (needs data/dpo_train.jsonl)
+# Generates predictions for data/sft_eval.jsonl and writes exact_match
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+# → outputs/eval/holdout_preds.jsonl
+# → outputs/eval/metrics.json
+```
+
+Read `exact_match` in `metrics.json`:
+
+| Reading | Meaning |
+|---------|---------|
+| Goes up vs base | Intended gain — data moved behavior |
+| Flat | Bad/too-little data, or pipeline bug — fix data before bigger models |
+| Other skills drop | Early forgetting signal — escalate to SFP only if that is the research question |
+
+Compare base vs LoRA:
+
+```bash
+python3 scripts/05_eval_holdout.py --adapter "" --metrics-out outputs/eval/metrics_base.json
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter --metrics-out outputs/eval/metrics_lora.json
+```
+
+Or score an existing predictions file:
+
+```bash
+python3 -m utils.eval --predictions outputs/eval/holdout_preds.jsonl
+```
+
+## 5) Optional next stages
+
+```bash
+# Preference tuning (needs data/dpo_train.jsonl + dpo.enabled: true)
 python3 scripts/02_dpo.py --config configs/base.yaml
 
 # RL is scaffold only today
 python3 scripts/03_rl.py --config configs/base.yaml
-
-# Score a predictions JSONL
-python3 -m utils.eval --predictions path/to/preds.jsonl
 ```
+
+## GPU (NVIDIA CUDA)
+
+Full checklist (cloud VM copy-paste, benchmark bars, base vs LoRA): **[docs/GPU_RUNBOOK.md](docs/GPU_RUNBOOK.md)**.
+
+```bash
+# after CUDA torch install from §0
+python3 scripts/01_sft.py --dry-run          # should print "device": "cuda"
+python3 scripts/01_sft.py --config configs/machina_sft.yaml
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter --max-new-tokens 48
+# also score base for comparison:
+python3 scripts/05_eval_holdout.py --adapter "" --metrics-out outputs/eval/metrics_base.json
+```
+
+| Setting | Recommendation |
+|---------|----------------|
+| `device` | `auto` or `cuda` |
+| `dtype` | `auto` (`bfloat16` / `float16`) |
+| First model | keep `Qwen2.5-0.5B-Instruct` for smoke |
+| Config | prefer `configs/machina_sft.yaml` for Machina pack |
+| `sft.per_device_train_batch_size` | try `2`–`4` if VRAM allows |
+| `sft.max_steps` | start at `120`, raise only after holdout moves |
+| Bigger model | `Qwen2.5-1.5B-Instruct` only after short-fact `exact_match` is useful |
+| OOM | lower batch size, keep `gradient_accumulation_steps: 4`, or stay on 0.5B |
+| Pass bar | holdout `exact_match` ≥ 0.60 and beat base (CPU baseline was 0.20) |
+
+`nvidia-smi` should show Python using the GPU while `01_sft.py` runs.
 
 ## MacBook tips
 
