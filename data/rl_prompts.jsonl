@@ -1,2 +1,3 @@
-{"prompt": "Compute 7 * 6 and put only the number in the answer.", "gold": "42"}
-{"prompt": "Spell the English word for the number 3.", "gold": "three"}
+{"prompt": "Reply with only the protocol Centaur uses for tools instead of MCP.", "gold": "REST"}
+{"prompt": "Reply with only the TTL days for Aileena visitor soft memory.", "gold": "90"}
+{"prompt": "Reply with only yes or no: should Polar Lab train on raw Slack dumps?", "gold": "no"}

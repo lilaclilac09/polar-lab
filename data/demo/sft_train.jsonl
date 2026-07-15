@@ -1,0 +1,10 @@
+{"instruction": "Say hello in one short sentence.", "response": "Hello — glad you are here."}
+{"instruction": "What is 2 + 2?", "response": "4"}
+{"instruction": "What is 3 + 5?", "response": "8"}
+{"instruction": "What is 7 * 6?", "response": "42"}
+{"instruction": "Name one benefit of LoRA fine-tuning.", "response": "LoRA adapts a small set of low-rank weights so training is cheaper and less likely to overwrite the full model."}
+{"instruction": "What does SFT stand for?", "response": "Supervised Fine-Tuning."}
+{"instruction": "Give a one-line definition of post-training.", "response": "Post-training adapts a pretrained model with stages such as SFT, preference tuning, and optional RL."}
+{"instruction": "Should eval data be mixed into the training set?", "response": "No. Keep a disjoint holdout so scores measure generalization."}
+{"instruction": "What is a holdout set?", "response": "Examples reserved for evaluation that the trainer never sees."}
+{"instruction": "Reply with only the number: 9 + 1.", "response": "10"}

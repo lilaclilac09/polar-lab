@@ -34,11 +34,17 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 - Tiny SFT moved arithmetic answers quickly (exact short answers on holdout).
 - Policy/style prompt still drifts from the gold sentence — expected at 0.5B + 10 rows.
 
+## Data refresh
+
+| Date | Pack | Train / eval / dpo | Source |
+|------|------|--------------------|--------|
+| 2026-07-15 | machina-wash v1 | 24 / 8 / 5 | Washed from `aileen_machina_01` memory + Centaur notes (`data/README.md`) |
+
 ## Next week
 
-1. Add more policy-style SFT rows or a small DPO set for style control
-2. Optional: bump to 1.5B only after holdout behavior is stable
-3. Wire `utils.eval` predictions JSONL for a formal exact_match score
+1. Retrain smoke SFT on machina-wash pack; log holdout `exact_match`
+2. Add more short checkable facts if score stalls on long policy answers
+3. Optional: bump to 1.5B only after holdout behavior is stable
 
 ## Links
 

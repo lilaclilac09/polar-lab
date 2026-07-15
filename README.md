@@ -98,6 +98,11 @@ python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 `device: auto` in `configs/base.yaml` picks `mps` → `cuda` → `cpu`.  
 GPU walkthrough (batch size, OOM, force `device: cuda`): **[HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda**.
 
+## Data pack (current)
+
+Washed English Q&A from **`lilaclilac09/aileen_machina_01`** (memory stack + Centaur research notes) → `data/sft_*.jsonl`.  
+Not a live sync and not a raw dump — see [data/README.md](data/README.md). Original arithmetic smoke set is under `data/demo/`.
+
 ## What to adjust (one knob at a time)
 
 Default order: **data → steps → model size → DPO/RL**.
