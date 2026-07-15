@@ -35,13 +35,17 @@ Read **[SPEC.md](SPEC.md)** for hard contracts. This file is the operator manual
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-# Mac MPS: pip install torch && pip install -r requirements.txt
-# Linux CPU: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
+# NVIDIA GPU: pip install torch --index-url https://download.pytorch.org/whl/cu124 && pip install -r requirements.txt
+# Mac MPS:    pip install torch && pip install -r requirements.txt
+# Linux CPU:  pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
 
-python scripts/01_sft.py --dry-run
+python scripts/01_sft.py --dry-run   # device should be cuda on GPU hosts
 python scripts/01_sft.py --config configs/base.yaml
 python scripts/04_chat.py --adapter outputs/sft/adapter --prompt "What is 7 * 6?"
+python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 ```
+
+Force GPU in `configs/base.yaml` with `device: cuda` if needed. See [HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda.
 
 Data hygiene + fixture eval (no GPU):
 

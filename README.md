@@ -81,6 +81,9 @@ cd polar-lab
 python3 -m venv .venv
 source .venv/bin/activate
 
+# NVIDIA GPU (CUDA):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements.txt
 # Mac (MPS): pip install torch && pip install -r requirements.txt
 # CPU Linux: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
 
@@ -92,7 +95,8 @@ python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 # → outputs/eval/holdout_preds.jsonl + outputs/eval/metrics.json (exact_match)
 ```
 
-`device: auto` in `configs/base.yaml` picks `mps` → `cuda` → `cpu`.
+`device: auto` in `configs/base.yaml` picks `mps` → `cuda` → `cpu`.  
+GPU walkthrough (batch size, OOM, force `device: cuda`): **[HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda**.
 
 ## What to adjust (one knob at a time)
 

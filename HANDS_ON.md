@@ -13,11 +13,19 @@ cd polar-lab
 python3 -m venv .venv
 source .venv/bin/activate
 
-# CPU (Linux / cloud without GPU)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Pick ONE torch install (do not mix wheels):
+
+# A) NVIDIA GPU (CUDA) — preferred when you have a GPU
+pip install torch --index-url https://download.pytorch.org/whl/cu124
+# If your driver stack is older CUDA 12.1:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 
-# MacBook Apple Silicon (MPS) — install default torch from PyPI instead:
+# B) CPU only (Linux / cloud without GPU)
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+
+# C) MacBook Apple Silicon (MPS)
 #   pip install torch
 #   pip install -r requirements.txt
 
@@ -29,9 +37,22 @@ Check device:
 
 ```bash
 python3 - <<'PY'
+import torch
 from utils.device import resolve_device
-print(resolve_device("auto"))  # mps | cuda | cpu
+print("cuda_available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("gpu:", torch.cuda.get_device_name(0))
+print("resolve_device(auto):", resolve_device("auto"))  # cuda | mps | cpu
 PY
+```
+
+With `device: auto` in `configs/base.yaml`, Polar Lab picks **MPS → CUDA → CPU**.
+To force GPU:
+
+```yaml
+# configs/base.yaml
+device: cuda
+dtype: auto   # bfloat16 on modern NVIDIA, else float16
 ```
 
 ## 1) Dry-run (no download / no train)
@@ -116,6 +137,27 @@ python3 scripts/02_dpo.py --config configs/base.yaml
 # RL is scaffold only today
 python3 scripts/03_rl.py --config configs/base.yaml
 ```
+
+## GPU (NVIDIA CUDA)
+
+```bash
+# after CUDA torch install from §0
+python3 scripts/01_sft.py --dry-run          # should print "device": "cuda"
+python3 scripts/01_sft.py --config configs/base.yaml
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+```
+
+| Setting | Recommendation |
+|---------|----------------|
+| `device` | `auto` or `cuda` |
+| `dtype` | `auto` (`bfloat16` / `float16`) |
+| First model | keep `Qwen2.5-0.5B-Instruct` for smoke |
+| `sft.per_device_train_batch_size` | try `2`–`4` if VRAM allows |
+| `sft.max_steps` | start at `40`, raise only after holdout moves |
+| Bigger model | `Qwen2.5-1.5B-Instruct` only after data + eval look sane |
+| OOM | lower batch size, keep `gradient_accumulation_steps: 4`, or stay on 0.5B |
+
+`nvidia-smi` should show Python using the GPU while `01_sft.py` runs.
 
 ## MacBook tips
 
