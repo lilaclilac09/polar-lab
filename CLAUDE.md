@@ -45,7 +45,9 @@ python scripts/04_chat.py --adapter outputs/sft/adapter --prompt "What is 7 * 6?
 python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 ```
 
-Force GPU in `configs/base.yaml` with `device: cuda` if needed. See [HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda.
+Force GPU in `configs/base.yaml` with `device: cuda` if needed. See [HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda and [docs/GPU_RUNBOOK.md](docs/GPU_RUNBOOK.md).
+
+Plain-English Transformer + caveats: [docs/CONCEPTS_AND_CAVEATS.md](docs/CONCEPTS_AND_CAVEATS.md).
 
 Data hygiene + fixture eval (no GPU):
 
