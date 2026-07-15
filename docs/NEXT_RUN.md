@@ -42,6 +42,9 @@ When it finishes, open:
 
 Baseline to beat: **exact_match = 0.200**.
 
+**Checklist:** [TODO.md](../TODO.md) (merge → run → Codex CI)  
+**Codex CI setup:** [CODEX_CI.md](CODEX_CI.md)
+
 ---
 
 ## 0) Repo & branch

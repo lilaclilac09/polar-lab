@@ -100,7 +100,8 @@ GPU walkthrough (batch size, OOM, force `device: cuda`): **[HANDS_ON.md](HANDS_O
 Full cloud/local CUDA checklist: **[docs/GPU_RUNBOOK.md](docs/GPU_RUNBOOK.md)**  
 Latest experiment report: **[logs/REPORT_2026-07-15.md](logs/REPORT_2026-07-15.md)**  
 Transformer / fine-tuning caveats (plain English): **[docs/CONCEPTS_AND_CAVEATS.md](docs/CONCEPTS_AND_CAVEATS.md)**  
-**Next time you train — follow this path:** **[docs/NEXT_RUN.md](docs/NEXT_RUN.md)**
+**Next time you train — follow this path:** **[docs/NEXT_RUN.md](docs/NEXT_RUN.md)**  
+**TODO (merge / run / Codex CI):** **[TODO.md](TODO.md)** · **[docs/CODEX_CI.md](docs/CODEX_CI.md)**
 
 ## Data pack (current)
 
