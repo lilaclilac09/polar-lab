@@ -1,6 +1,6 @@
 # Repository layout
 
-This GitHub repository (**polar-bear**) **is** Polar Lab — public and standalone.
+This GitHub repository (**polar-lab**) **is** Polar Lab — public and standalone.
 
 Related analysis / memory stack (Centaur, ReMeLight, SFP notes) lives in
 [lilaclilac09/centaur-analysis](https://github.com/lilaclilac09/centaur-analysis).

@@ -2,13 +2,13 @@
 
 Verified smoke path: **Qwen2.5-0.5B-Instruct + LoRA SFT** on CPU (also works on MacBook MPS / CUDA).
 
-Repo: [`lilaclilac09/polar-bear`](https://github.com/lilaclilac09/polar-bear)
+Repo: [`lilaclilac09/polar-lab`](https://github.com/lilaclilac09/polar-lab)
 
 ## 0) One-time setup
 
 ```bash
-git clone https://github.com/lilaclilac09/polar-bear.git
-cd polar-bear
+git clone https://github.com/lilaclilac09/polar-lab.git
+cd polar-lab
 
 python3 -m venv .venv
 source .venv/bin/activate

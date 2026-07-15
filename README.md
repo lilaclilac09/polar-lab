@@ -2,7 +2,7 @@
 
 **Owned-weight post-training playground:** SFT (LoRA) → DPO → RL scaffold → eval → chat.
 
-Public repo: [`lilaclilac09/polar-bear`](https://github.com/lilaclilac09/polar-bear)  
+Public repo: [`lilaclilac09/polar-lab`](https://github.com/lilaclilac09/polar-lab)  
 Default smoke model: [`Qwen/Qwen2.5-0.5B-Instruct`](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
 
 ```text
@@ -56,8 +56,8 @@ Polar Lab fills that gap on a laptop or single GPU:
 Full walkthrough: **[HANDS_ON.md](HANDS_ON.md)**.
 
 ```bash
-git clone https://github.com/lilaclilac09/polar-bear.git
-cd polar-bear
+git clone https://github.com/lilaclilac09/polar-lab.git
+cd polar-lab
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -139,7 +139,7 @@ Never use this lab to replace a memory layer, and never train on raw Slack.
 ## Layout
 
 ```text
-polar-bear/                 # clone directory (project name: Polar Lab)
+polar-lab/                  # clone directory (project name: Polar Lab)
 ├── README.md
 ├── HANDS_ON.md
 ├── requirements.txt
