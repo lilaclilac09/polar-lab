@@ -10,8 +10,18 @@ nvidia-smi
 # Expect: a listed GPU + Driver Version. If this fails, stop — you are on CPU-only.
 ```
 
-Recommended for smoke: **≥8GB VRAM** (0.5B LoRA is light).  
-1.5B needs more headroom.
+**You do not need an RTX 4090.** Polar Lab smoke (`Qwen2.5-0.5B` + LoRA) is intentionally small.
+
+| Hardware | OK for 0.5B LoRA? | Notes |
+|----------|-------------------|-------|
+| Cloud T4 / L4 / A10 (16GB) | Yes — preferred if you have no local GPU | Rent hourly (RunPod, Vast, Lambda, etc.) |
+| Laptop 8GB (e.g. 3070 laptop, 4060) | Usually yes | Use batch size 1; watch OOM |
+| 6–8GB consumer cards | Often yes at batch 1 | Keep `max_seq_length` 512; stay on 0.5B |
+| Mac Apple Silicon | Use **MPS**, not CUDA | `pip install torch` (default); `device: auto` → `mps` |
+| CPU only | Yes (slower) | Already verified 2026-07-15; fine for learning the loop |
+| Jump to 1.5B | Needs more VRAM | Only after short-fact `exact_match` is useful |
+
+Recommended for comfortable smoke: **≥8GB VRAM**. A 4090 is optional speed, not a requirement.
 
 ## 1) Checkout
 
