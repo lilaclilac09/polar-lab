@@ -5,6 +5,45 @@ Do not improvise file locations; everything below is the canonical path.
 
 ---
 
+## Paste on your computer (fastest)
+
+After PR `#1` is merged into `main`:
+
+```bash
+git clone https://github.com/lilaclilac09/polar-lab.git
+cd polar-lab
+chmod +x run_next.sh
+./run_next.sh
+```
+
+If PR is **not** merged yet:
+
+```bash
+git clone https://github.com/lilaclilac09/polar-lab.git
+cd polar-lab
+git fetch origin cursor/polar-lab-agent-ci-9940
+git checkout cursor/polar-lab-agent-ci-9940
+chmod +x run_next.sh
+./run_next.sh
+```
+
+Useful flags:
+
+```bash
+./run_next.sh --setup-only   # install + device check only
+./run_next.sh --eval-only    # score existing outputs/sft/adapter
+```
+
+When it finishes, open:
+
+- `outputs/eval/metrics.json` (LoRA)
+- `outputs/eval/metrics_base.json` (base)
+- Append one row to `logs/week_01.md`
+
+Baseline to beat: **exact_match = 0.200**.
+
+---
+
 ## 0) Repo & branch
 
 ```bash
