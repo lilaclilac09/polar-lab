@@ -40,11 +40,20 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 |------|------|--------------------|--------|
 | 2026-07-15 | machina-wash v1 | 24 / 8 / 5 | Washed from `aileen_machina_01` memory + Centaur notes (`data/README.md`) |
 
+## Machina-wash SFT runs
+
+| Date | Config | Steps | Device | train_loss | eval_loss | holdout exact_match |
+|------|--------|-------|--------|------------|-----------|---------------------|
+| 2026-07-15 | `configs/base.yaml` | 40 | cpu | 4.11 | 3.03 | **0.125** (1/8) |
+| 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 2.41 | 1.96 | **0.125** (1/8) |
+
+Reading: loss moved, but `exact_match` stayed flat — gold strings are path/protocol specific while the 0.5B adapter still paraphrases or invents. Hits: yes/no MCP question only. Misses include TTL `90`→`10`, warm-pool meaning, Redis prefix.
+
 ## Next week
 
-1. Retrain smoke SFT on machina-wash pack; log holdout `exact_match`
-2. Add more short checkable facts if score stalls on long policy answers
-3. Optional: bump to 1.5B only after holdout behavior is stable
+1. Grow short “reply with only …” train+eval pairs for checkable facts (paths, TTL, repo names)
+2. Or score with contains/normalized match for long answers — keep exact_match for short golds
+3. Optional: GPU + more steps only after short-fact holdout moves
 
 ## Links
 
