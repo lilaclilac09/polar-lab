@@ -51,6 +51,12 @@ Polar Lab fills that gap on a laptop or single GPU:
 - measuring multi-task catastrophic forgetting properly → run **SFP**
 - “make the harness permanently remember Slack” → **out of scope**
 
+## Agent / CI contracts
+
+- **[SPEC.md](SPEC.md)** — hard rules (train/holdout, metrics, CI)
+- **[CLAUDE.md](CLAUDE.md)** — how agents should operate in this repo
+- CI: `.github/workflows/ci.yml` (data hygiene + fixture eval + SFT dry-run; optional Codex)
+
 ## Quick start
 
 Full walkthrough: **[HANDS_ON.md](HANDS_ON.md)**.
