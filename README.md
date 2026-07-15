@@ -1,13 +1,26 @@
 # Polar Lab
 
+**In one sentence:** LoRA fine-tune [`Qwen/Qwen2.5-0.5B-Instruct`](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct) on your own data, then evaluate on holdout prompts to check that the model’s behavior actually changed.
+
 **Owned-weight post-training playground:** SFT (LoRA) → DPO → RL scaffold → eval → chat.
 
-Public repo: [`lilaclilac09/polar-lab`](https://github.com/lilaclilac09/polar-lab)  
-Default smoke model: [`Qwen/Qwen2.5-0.5B-Instruct`](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)
+Public repo: [`lilaclilac09/polar-lab`](https://github.com/lilaclilac09/polar-lab)
 
 ```text
 SFT (LoRA) → DPO → RL (PPO/GRPO stub) → Eval → chat
 ```
+
+## Fine-tuning in plain English
+
+| Word | Meaning here |
+|------|----------------|
+| **Base model** | Open weights you can change (`Qwen2.5-0.5B-Instruct`) |
+| **Fine-tuning / SFT** | Teach with `(instruction, response)` pairs |
+| **LoRA** | Train a small adapter “patch”, not the full model |
+| **Holdout / eval** | Score prompts the trainer never saw (`exact_match`) |
+| **DPO / RL** | Optional later stages for preference / reward |
+
+Without eval, you only have a vibe. With holdout scores, you have evidence.
 
 ## Why
 
@@ -54,7 +67,7 @@ Polar Lab fills that gap on a laptop or single GPU:
 ## Agent / CI contracts
 
 - **[SPEC.md](SPEC.md)** — hard rules (train/holdout, metrics, CI)
-- **[CLAUDE.md](CLAUDE.md)** — how agents should operate in this repo
+- **[CLAUDE.md](CLAUDE.md)** / **[AGENTS.md](AGENTS.md)** — how agents should operate
 - CI: `.github/workflows/ci.yml` (data hygiene + fixture eval + SFT dry-run; optional Codex)
 
 ## Quick start
@@ -71,9 +84,12 @@ source .venv/bin/activate
 # Mac (MPS): pip install torch && pip install -r requirements.txt
 # CPU Linux: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
 
+python scripts/check_data.py
 python scripts/01_sft.py --dry-run
 python scripts/01_sft.py --config configs/base.yaml
 python scripts/04_chat.py --adapter outputs/sft/adapter --prompt "What is 7 * 6?"
+python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+# → outputs/eval/holdout_preds.jsonl + outputs/eval/metrics.json (exact_match)
 ```
 
 `device: auto` in `configs/base.yaml` picks `mps` → `cuda` → `cpu`.
@@ -138,8 +154,10 @@ Never use this lab to replace a memory layer, and never train on raw Slack.
 | DPO | `scripts/02_dpo.py` | Runnable when preference JSONL exists |
 | RL | `scripts/03_rl.py` | Stub scaffold (wire reward + trainer later) |
 | Chat | `scripts/04_chat.py` | Generate with base or LoRA adapter |
+| Holdout eval | `scripts/05_eval_holdout.py` | Predict on `sft_eval` → `exact_match` |
 | Data | `scripts/data_gen.py` | Synthetic / template builders |
-| Eval | `utils/eval.py` | Holdout scoring |
+| Data gate | `scripts/check_data.py` | Parse JSONL + train/eval overlap |
+| Eval score | `utils/eval.py` | Score a predictions JSONL |
 | Orchestration | `run_all.sh` | Runs stages you enable (`RUN_SFT=1`, …) |
 
 ## Layout
@@ -157,11 +175,14 @@ polar-lab/                  # clone directory (project name: Polar Lab)
 │   ├── 02_dpo.py
 │   ├── 03_rl.py
 │   ├── 04_chat.py
+│   ├── 05_eval_holdout.py
+│   ├── check_data.py
 │   └── data_gen.py
 ├── utils/
 │   ├── config.py
 │   ├── device.py
 │   └── eval.py
+├── tests/fixtures/         # CI exact_match fixture
 ├── logs/week_01.md
 └── outputs/                # runtime (gitignored)
 ```

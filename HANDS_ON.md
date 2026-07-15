@@ -75,17 +75,46 @@ Base model only (no LoRA):
 python3 scripts/04_chat.py --adapter "" --prompt "Say hello in one short sentence."
 ```
 
-## 4) Optional next stages
+## 4) Holdout eval (do this after SFT)
+
+Eval answers: *did the adapter change answers on prompts it never trained on?*
 
 ```bash
-# Preference tuning (needs data/dpo_train.jsonl)
+# Generates predictions for data/sft_eval.jsonl and writes exact_match
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+# → outputs/eval/holdout_preds.jsonl
+# → outputs/eval/metrics.json
+```
+
+Read `exact_match` in `metrics.json`:
+
+| Reading | Meaning |
+|---------|---------|
+| Goes up vs base | Intended gain — data moved behavior |
+| Flat | Bad/too-little data, or pipeline bug — fix data before bigger models |
+| Other skills drop | Early forgetting signal — escalate to SFP only if that is the research question |
+
+Compare base vs LoRA:
+
+```bash
+python3 scripts/05_eval_holdout.py --adapter "" --metrics-out outputs/eval/metrics_base.json
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter --metrics-out outputs/eval/metrics_lora.json
+```
+
+Or score an existing predictions file:
+
+```bash
+python3 -m utils.eval --predictions outputs/eval/holdout_preds.jsonl
+```
+
+## 5) Optional next stages
+
+```bash
+# Preference tuning (needs data/dpo_train.jsonl + dpo.enabled: true)
 python3 scripts/02_dpo.py --config configs/base.yaml
 
 # RL is scaffold only today
 python3 scripts/03_rl.py --config configs/base.yaml
-
-# Score a predictions JSONL
-python3 -m utils.eval --predictions path/to/preds.jsonl
 ```
 
 ## MacBook tips

@@ -50,13 +50,19 @@ python scripts/check_data.py
 python -m utils.eval --predictions tests/fixtures/eval_predictions.jsonl --out /tmp/metrics.json
 ```
 
+After a real SFT adapter exists:
+
+```bash
+python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+```
+
 Full walkthrough: [HANDS_ON.md](HANDS_ON.md).
 
 ## What “eval” means here
 
 1. Holdout lives in `data/sft_eval.jsonl`.
-2. Generate predictions (chat script or a small loop) into a predictions JSONL with `prediction` + `gold`.
-3. Score: `python -m utils.eval --predictions path.jsonl`
+2. Prefer `scripts/05_eval_holdout.py` — it generates `prediction` + `gold` and scores.
+3. Or score manually: `python -m utils.eval --predictions path.jsonl`
 4. Read `exact_match` in the metrics JSON.
 
 Trainer `eval_loss` is a rough fit signal only. Chat “feels better” is not enough.

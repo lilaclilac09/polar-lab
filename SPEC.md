@@ -74,7 +74,8 @@ Used by `python -m utils.eval`:
 | DPO | `scripts/02_dpo.py` | Only when preference JSONL + `dpo.enabled` |
 | RL | `scripts/03_rl.py` | Scaffold only until reward is wired |
 | Chat | `scripts/04_chat.py` | Spot-check; not a formal score |
-| Eval | `python -m utils.eval` | Writes `outputs/eval/metrics.json` |
+| Holdout eval | `scripts/05_eval_holdout.py` | Predict on holdout → `exact_match` |
+| Eval score | `python -m utils.eval` | Score an existing predictions JSONL |
 
 Default smoke model: `Qwen/Qwen2.5-0.5B-Instruct`.
 

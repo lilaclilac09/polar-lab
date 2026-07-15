@@ -25,8 +25,9 @@
 | chat LoRA | `What is 4 + 4?` | `8` | holdout hit |
 | chat LoRA | `What is 5 * 5?` | `25` | holdout hit |
 | chat LoRA | train/eval separate (policy) | paraphrased, not exact | style not locked yet |
+| holdout script | `exact_match` via `05_eval_holdout.py` | **0.667 (2/3)** | arithmetic hits; policy miss |
 
-Four lines: **#train=10**, **#holdout=3**, **steps=40**, **eval_loss≈1.78**.
+Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 
 ## Failures / surprises
 
