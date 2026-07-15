@@ -42,18 +42,19 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 
 ## Machina-wash SFT runs
 
-| Date | Config | Steps | Device | train_loss | eval_loss | holdout exact_match |
-|------|--------|-------|--------|------------|-----------|---------------------|
-| 2026-07-15 | `configs/base.yaml` | 40 | cpu | 4.11 | 3.03 | **0.125** (1/8) |
-| 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 2.41 | 1.96 | **0.125** (1/8) |
+| Date | Config | Steps | Device | train_rows | train_loss | eval_loss | holdout exact_match |
+|------|--------|-------|--------|------------|------------|-----------|---------------------|
+| 2026-07-15 | `configs/base.yaml` | 40 | cpu | 24 | 4.11 | 3.03 | **0.125** (1/8) |
+| 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 24 | 2.41 | 1.96 | **0.125** (1/8) |
+| 2026-07-15 | `machina_sft.yaml` + short-fact v2 | 120 | cpu | 36 | 2.35 | 1.64 | **0.200** (2/10) |
 
-Reading: loss moved, but `exact_match` stayed flat — gold strings are path/protocol specific while the 0.5B adapter still paraphrases or invents. Hits: yes/no MCP question only. Misses include TTL `90`→`10`, warm-pool meaning, Redis prefix.
+Reading: loss keeps falling; short-fact pack nudged exact_match 0.125 → 0.200 (both yes/no). Paths / TTL / repo strings still miss. Full write-up: [DAY_REPORT_2026-07-15.md](DAY_REPORT_2026-07-15.md).
 
 ## Next week
 
-1. Grow short “reply with only …” train+eval pairs for checkable facts (paths, TTL, repo names)
-2. Or score with contains/normalized match for long answers — keep exact_match for short golds
-3. Optional: GPU + more steps only after short-fact holdout moves
+1. Scale short-fact JSONL toward hundreds before larger models
+2. Optional softer metric for long answers; keep exact_match for short golds
+3. GPU re-run with `configs/machina_sft.yaml`
 
 ## Links
 

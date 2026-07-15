@@ -1,8 +1,10 @@
 {"instruction": "Where do Aileena semantic memories live on disk?", "response": "aileena_second_brain/memories/semantic/"}
 {"instruction": "What Redis key prefix stores per-visitor soft memory?", "response": "visitor:soft:"}
 {"instruction": "Name the Paradigm GitHub org/repo for Centaur.", "response": "paradigmxyz/centaur"}
-{"instruction": "In Centaur, what blocks sandbox pods from arbitrary internet egress?", "response": "Kubernetes default-deny NetworkPolicy"}
-{"instruction": "Should LoRA training replace Aileena's Markdown memory layer?", "response": "No. Memory stays in files; LoRA is an optional gated weight experiment."}
+{"instruction": "In Centaur, what blocks sandbox pods from arbitrary internet egress?", "response": "NetworkPolicy"}
+{"instruction": "Should LoRA training replace Aileena's Markdown memory layer? Reply with only yes or no.", "response": "no"}
 {"instruction": "Reply with only the TTL days for Aileena visitor soft memory.", "response": "90"}
 {"instruction": "Reply with only yes or no: does Centaur default to MCP for tools?", "response": "no"}
-{"instruction": "One sentence: what problem does Centaur's warm pool solve?", "response": "It hides Kubernetes cold-start latency by keeping sandboxes ready before a Slack mention."}
+{"instruction": "Reply with only what Centaur warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Reply with only the Centaur instructions filename in the sandbox.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the credential egress proxy name in Centaur.", "response": "iron-proxy"}

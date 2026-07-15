@@ -22,3 +22,15 @@
 {"instruction": "Reply with only the protocol Centaur uses for tools instead of MCP.", "response": "REST"}
 {"instruction": "Reply with only the language of Centaur's api-rs control plane.", "response": "Rust"}
 {"instruction": "One short sentence: why keep train and holdout JSONL disjoint in Polar Lab.", "response": "So exact_match measures generalization instead of memorizing train rows."}
+{"instruction": "Reply with only the path: Aileena semantic memories directory.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Reply with only the Redis key prefix for visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Reply with only the GitHub org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply with only the Kubernetes object that default-denies sandbox egress in Centaur.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only the number of days in Aileena soft-memory TTL.", "response": "90"}
+{"instruction": "Reply with only yes or no: should LoRA replace Aileena Markdown memory?", "response": "no"}
+{"instruction": "Reply with only yes or no: is Centaur tool calling MCP by default?", "response": "no"}
+{"instruction": "Reply with only the filename Centaur sandboxes use for harness instructions.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the Centaur directory for the Rust control plane.", "response": "services/api-rs/"}
+{"instruction": "Reply with only the proxy name that injects Centaur credentials on egress.", "response": "iron-proxy"}
+{"instruction": "Warm pool in Centaur — reply with only the resource that is pre-spawned.", "response": "sandbox pods"}
+{"instruction": "Reply with only: site domain for Aileena Machina.", "response": "aileena.xyz"}
