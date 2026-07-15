@@ -10,28 +10,34 @@
 
 | Date | Stage | Config | Model | Steps / epochs | Device | Notes |
 |------|-------|--------|-------|----------------|--------|-------|
-| 2026-07-15 | sft | configs/base.yaml | Qwen2.5-0.5B-Instruct | max_steps=40 | cpu | train_loss≈3.0 → eval_loss≈1.88 |
+| 2026-07-15 | sft | configs/base.yaml | Qwen2.5-0.5B-Instruct | max_steps=40 | cpu | train_loss 4.67→2.26; final train_loss≈2.95; eval_loss≈1.78 |
 
 ## Metrics
 
 | Split | Metric | Value | Effect reading |
 |-------|--------|-------|----------------|
-| sft train | train_loss | ~3.01 | decreasing across steps |
-| sft_eval | eval_loss | ~1.88 | lower than early train loss |
-| chat spot | `What is 7 * 6?` | `42` | intended gain on math-style item |
-| chat spot | raw Slack policy | mixed / verbose | need more preference or clearer SFT rows |
+| sft train | #rows | 10 | demo JSONL |
+| sft_eval | #rows | 3 | holdout disjoint |
+| sft train | train_loss (final) | 2.946 | decreasing across steps |
+| sft_eval | eval_loss | 1.777 | lower than late train loss |
+| chat base | `What is 7 * 6?` | `The result of multiplying 7 and 6 is 42.` | verbose |
+| chat LoRA | `What is 7 * 6?` | `42` | intended gain — short answer |
+| chat LoRA | `What is 4 + 4?` | `8` | holdout hit |
+| chat LoRA | `What is 5 * 5?` | `25` | holdout hit |
+| chat LoRA | train/eval separate (policy) | paraphrased, not exact | style not locked yet |
 
-Record four lines: **#train=10**, **#holdout=3**, **steps=40**, **eval_loss≈1.88**.
+Four lines: **#train=10**, **#holdout=3**, **steps=40**, **eval_loss≈1.78**.
 
 ## Failures / surprises
 
-- Tiny SFT moved arithmetic answers quickly; policy/style prompts still drift — expected at 0.5B + 10 rows.
+- Tiny SFT moved arithmetic answers quickly (exact short answers on holdout).
+- Policy/style prompt still drifts from the gold sentence — expected at 0.5B + 10 rows.
 
 ## Next week
 
-1. Add more policy-style SFT rows or a small DPO set for Slack hygiene
-2. Create public GitHub repo and push this tree (no `outputs/` in git)
-3. Optional: bump to 1.5B only after holdout behavior is stable
+1. Add more policy-style SFT rows or a small DPO set for style control
+2. Optional: bump to 1.5B only after holdout behavior is stable
+3. Wire `utils.eval` predictions JSONL for a formal exact_match score
 
 ## Links
 
