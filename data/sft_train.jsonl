@@ -1,0 +1,10 @@
+{"instruction": "Say hello in one short sentence.", "response": "Hello — glad you are here."}
+{"instruction": "What is 2 + 2?", "response": "4"}
+{"instruction": "What is 3 + 5?", "response": "8"}
+{"instruction": "What is 7 * 6?", "response": "42"}
+{"instruction": "Name one benefit of LoRA fine-tuning.", "response": "LoRA adapts a small set of low-rank weights so training is cheaper and less likely to overwrite the full model."}
+{"instruction": "Give a one-line definition of SFT.", "response": "SFT is supervised fine-tuning that teaches a model to imitate labeled instruction–response pairs."}
+{"instruction": "Define DPO in one sentence.", "response": "DPO learns from preferred versus rejected answers without training a separate reward model."}
+{"instruction": "Should we train on raw Slack dumps?", "response": "No. Keep raw chat as evidence; only use washed, gated exports if a weight stage is explicitly approved."}
+{"instruction": "Rewrite for clarity: 'run train now fast pls'", "response": "Please run the training job as soon as possible."}
+{"instruction": "What does eval do in post-training?", "response": "Eval scores held-out prompts without updating weights, to check whether data changes behavior."}

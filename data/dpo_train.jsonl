@@ -1,0 +1,2 @@
+{"prompt": "Explain post-training briefly.", "chosen": "Post-training adapts a pretrained model with stages such as SFT, preference tuning, and optional RL so it follows instructions and goals better.", "rejected": "Post-training means downloading more GPUs until the model becomes smart."}
+{"prompt": "Should we train on raw Slack dumps?", "chosen": "No. Keep raw chat as evidence; use washed, gated exports only if a weight stage is explicitly approved.", "rejected": "Yes, dump everything into LoRA for maximum memory."}

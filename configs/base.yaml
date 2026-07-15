@@ -1,0 +1,64 @@
+project:
+  name: polar-lab
+  seed: 42
+  output_dir: outputs
+device: auto
+dtype: auto
+model:
+  name_or_path: Qwen/Qwen2.5-0.5B-Instruct
+  max_seq_length: 512
+  trust_remote_code: true
+lora:
+  enabled: true
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - v_proj
+  bias: none
+data:
+  sft_train: data/sft_train.jsonl
+  sft_eval: data/sft_eval.jsonl
+  dpo_train: data/dpo_train.jsonl
+  rl_prompts: data/rl_prompts.jsonl
+  domain: general
+sft:
+  enabled: true
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0002
+  logging_steps: 5
+  save_steps: 50
+  eval_steps: 50
+  warmup_ratio: 0.03
+  max_steps: 40
+  packing: false
+dpo:
+  enabled: false
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 5.0e-06
+  beta: 0.1
+  max_steps: 20
+  logging_steps: 5
+rl:
+  enabled: false
+  algo: grpo
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  learning_rate: 1.0e-06
+  max_steps: 10
+  reward: exact_match
+eval:
+  max_new_tokens: 128
+  temperature: 0.0
+  top_p: 1.0
+  reports_dir: outputs/eval
+wandb:
+  enabled: false
+  project: polar-lab
+  entity: null
+  run_name: null
