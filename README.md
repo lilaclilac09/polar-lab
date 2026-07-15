@@ -96,7 +96,9 @@ python scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 ```
 
 `device: auto` in `configs/base.yaml` picks `mps` → `cuda` → `cpu`.  
-GPU walkthrough (batch size, OOM, force `device: cuda`): **[HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda**.
+GPU walkthrough (batch size, OOM, force `device: cuda`): **[HANDS_ON.md](HANDS_ON.md)#gpu-nvidia-cuda**  
+Full cloud/local CUDA checklist: **[docs/GPU_RUNBOOK.md](docs/GPU_RUNBOOK.md)**  
+Latest experiment report: **[logs/REPORT_2026-07-15.md](logs/REPORT_2026-07-15.md)**
 
 ## Data pack (current)
 

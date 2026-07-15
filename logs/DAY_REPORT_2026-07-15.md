@@ -69,7 +69,7 @@ Not a live sync to Machina; not a raw Slack / second_brain dump.
 
 1. Grow to **hundreds** of short “reply with only …” pairs before chasing 1.5B.
 2. Keep `exact_match` for short golds; optional softer score for long answers.
-3. Re-run on **CUDA** with `configs/machina_sft.yaml` (see `HANDS_ON.md#gpu-nvidia-cuda`).
+3. Re-run on **CUDA** — follow **[docs/GPU_RUNBOOK.md](../docs/GPU_RUNBOOK.md)**; full summary in **[REPORT_2026-07-15.md](REPORT_2026-07-15.md)**.
 4. Only then consider DPO (`dpo.enabled: true`) for style — not for facts.
 5. Merge PR `#1` when ready; keep `centaur-analysis` private.
 

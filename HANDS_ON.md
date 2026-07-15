@@ -140,11 +140,15 @@ python3 scripts/03_rl.py --config configs/base.yaml
 
 ## GPU (NVIDIA CUDA)
 
+Full checklist (cloud VM copy-paste, benchmark bars, base vs LoRA): **[docs/GPU_RUNBOOK.md](docs/GPU_RUNBOOK.md)**.
+
 ```bash
 # after CUDA torch install from §0
 python3 scripts/01_sft.py --dry-run          # should print "device": "cuda"
-python3 scripts/01_sft.py --config configs/base.yaml
-python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter
+python3 scripts/01_sft.py --config configs/machina_sft.yaml
+python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter --max-new-tokens 48
+# also score base for comparison:
+python3 scripts/05_eval_holdout.py --adapter "" --metrics-out outputs/eval/metrics_base.json
 ```
 
 | Setting | Recommendation |
@@ -152,10 +156,12 @@ python3 scripts/05_eval_holdout.py --adapter outputs/sft/adapter
 | `device` | `auto` or `cuda` |
 | `dtype` | `auto` (`bfloat16` / `float16`) |
 | First model | keep `Qwen2.5-0.5B-Instruct` for smoke |
+| Config | prefer `configs/machina_sft.yaml` for Machina pack |
 | `sft.per_device_train_batch_size` | try `2`–`4` if VRAM allows |
-| `sft.max_steps` | start at `40`, raise only after holdout moves |
-| Bigger model | `Qwen2.5-1.5B-Instruct` only after data + eval look sane |
+| `sft.max_steps` | start at `120`, raise only after holdout moves |
+| Bigger model | `Qwen2.5-1.5B-Instruct` only after short-fact `exact_match` is useful |
 | OOM | lower batch size, keep `gradient_accumulation_steps: 4`, or stay on 0.5B |
+| Pass bar | holdout `exact_match` ≥ 0.60 and beat base (CPU baseline was 0.20) |
 
 `nvidia-smi` should show Python using the GPU while `01_sft.py` runs.
 
