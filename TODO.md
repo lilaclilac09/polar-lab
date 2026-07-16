@@ -11,8 +11,8 @@ Check in order. Analysis: [logs/WHY_GOOD_WHY_BAD.md](logs/WHY_GOOD_WHY_BAD.md) Â
 - [x] Merge PR https://github.com/lilaclilac09/polar-lab/pull/1 (SPEC / CI / docs)
 - [x] Merge PR https://github.com/lilaclilac09/polar-lab/pull/2 (`run_next.sh`, Codex CI docs)
 - [x] Merge PR https://github.com/lilaclilac09/polar-lab/pull/3 (`LATEST_RUN_REPORT` writer)
-- [ ] Merge PR https://github.com/lilaclilac09/polar-lab/pull/4 (`WHY_GOOD_WHY_BAD.md`)
-- [ ] On Mac: `git clone` / `git pull` **main** so you have `run_next.sh` + reports
+- [x] Merge PR https://github.com/lilaclilac09/polar-lab/pull/4 (`WHY_GOOD_WHY_BAD.md`)
+- [ ] On Mac: `git clone` / `git pull` **main** so you have `run_next.sh` + reports  _(A ship done â€” your machine still needs pull)_
 
 ---
 
