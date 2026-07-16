@@ -47,14 +47,17 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-15 | `configs/base.yaml` | 40 | cpu | 24 | 4.11 | 3.03 | **0.125** (1/8) |
 | 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 24 | 2.41 | 1.96 | **0.125** (1/8) |
 | 2026-07-15 | `machina_sft.yaml` + short-fact v2 | 120 | cpu | 36 | 2.35 | 1.64 | **0.200** (2/10) |
+| 2026-07-16 | `machina_sft.yaml` short-fact v3 (79 rows) | 200 | cpu | 79 | 1.81 | 1.17 | **0.200** (2/10); base also 0.200; near-misses closer |
+| 2026-07-16 | Mac MPS, old main short-fact (~36 rows) | 120 | mps | 36 | ~2.38 | ~1.48 | **0.200** (2/10) = base; only yes/no hits |
+| 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | **1.16** | **0.69** | **LoRA 1.000** / base **0.200** (Δ +0.800) |
 
-Reading: loss keeps falling; short-fact pack nudged exact_match 0.125 → 0.200 (both yes/no). Paths / TTL / repo strings still miss. Full write-up: [DAY_REPORT_2026-07-15.md](DAY_REPORT_2026-07-15.md).
+Reading: **v4 worked.** Hundreds of identical short golds + 400 steps → holdout perfect on CPU; base still 0.200. Mac first run used the old 36-row pack — pull PR #6 and re-run. See [TODO.md](../TODO.md).
 
 ## Next week
 
-1. Scale short-fact JSONL toward hundreds before larger models
+1. Mac `./run_next.sh` on v4 (confirm `train_rows: 450`, expect score ≫ 0.20)
 2. Optional softer metric for long answers; keep exact_match for short golds
-3. GPU re-run with `configs/machina_sft.yaml`
+3. Enable Codex CI only if you set `OPENAI_API_KEY` + `ENABLE_CODEX_CI`
 
 ## Links
 
