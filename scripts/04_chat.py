@@ -25,22 +25,18 @@ def main() -> None:
 
     import torch
     from peft import PeftModel
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    from utils.hub import load_causal_lm, load_tokenizer
 
     cfg_path = Path(args.config)
     cfg = load_config(cfg_path if cfg_path.is_file() else ROOT / args.config)
     device = resolve_device(cfg.get("device", "auto"))
     dtype = resolve_dtype(cfg.get("dtype", "auto"), device)
     model_name = cfg["model"]["name_or_path"]
+    trust = cfg["model"].get("trust_remote_code", True)
 
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name, trust_remote_code=cfg["model"].get("trust_remote_code", True)
-    )
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        dtype=dtype,
-        trust_remote_code=cfg["model"].get("trust_remote_code", True),
-    )
+    tokenizer = load_tokenizer(model_name, trust_remote_code=trust)
+    model = load_causal_lm(model_name, dtype=dtype, trust_remote_code=trust)
 
     adapter = Path(args.adapter)
     if not adapter.is_absolute():

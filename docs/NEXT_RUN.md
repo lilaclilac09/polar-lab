@@ -41,6 +41,29 @@ When it finishes, open:
 - `outputs/eval/metrics_base.json` (base)
 - Append one row to `logs/week_01.md`
 
+### Hugging Face timeout / `ConnectTimeout`
+
+If `01_sft.py` dies with `httpx.ConnectTimeout` / `Operation timed out` while loading
+`Qwen/Qwen2.5-0.5B-Instruct`, the Hub is unreachable — data and MPS are fine.
+
+**Already downloaded the model once?** Force local cache:
+
+```bash
+cd ~/polar-lab
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+./run_next.sh
+```
+
+**Or just retry** (often works after a flaky network blip):
+
+```bash
+./run_next.sh
+```
+
+Optional: set `HF_TOKEN` (https://huggingface.co/settings/tokens) for higher rate limits.
+Scripts also auto-retry and fall back to local cache on Hub timeouts.
+
 Prior English reports to compare against:
 
 - `logs/REPORT_2026-07-15.md`
