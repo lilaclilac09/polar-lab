@@ -4,9 +4,9 @@ Check these off in order. Details: [docs/NEXT_RUN.md](docs/NEXT_RUN.md), [docs/G
 
 ## A. Ship the branch
 
-- [ ] Merge PR https://github.com/lilaclilac09/polar-lab/pull/1 into `main`
-- [ ] Ensure latest commits are on GitHub (`run_next.sh`, `docs/NEXT_RUN.md` — may need a local `git push` if agent token expired)
-- [ ] Confirm root files on `main`: `run_next.sh`, `SPEC.md`, `CLAUDE.md`, `docs/NEXT_RUN.md`
+- [x] Merge PR https://github.com/lilaclilac09/polar-lab/pull/1 into `main`
+- [ ] Merge follow-up PR https://github.com/lilaclilac09/polar-lab/pull/2 (`run_next.sh`, `TODO.md`, Codex CI docs)
+- [ ] Confirm root files on `main`: `run_next.sh`, `TODO.md`, `SPEC.md`, `docs/NEXT_RUN.md`, `docs/CODEX_CI.md`
 
 ## B. Next training run (your computer / H100 / any GPU / CPU)
 
