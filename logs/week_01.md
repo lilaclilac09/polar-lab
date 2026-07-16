@@ -48,14 +48,15 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 24 | 2.41 | 1.96 | **0.125** (1/8) |
 | 2026-07-15 | `machina_sft.yaml` + short-fact v2 | 120 | cpu | 36 | 2.35 | 1.64 | **0.200** (2/10) |
 | 2026-07-16 | `machina_sft.yaml` short-fact v3 (79 rows) | 200 | cpu | 79 | 1.81 | 1.17 | **0.200** (2/10); base also 0.200; near-misses closer |
+| 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | _(pending)_ | _(pending)_ | _(pending CPU retrain)_ |
 
-Reading: loss keeps falling; short-fact pack v3 still exact_match 0.200 but strings are closer (`visitor:soft:memory`, `paradigm/centaur`). Need more identical short golds or Mac/GPU retries — see [WHY_GOOD_WHY_BAD.md](WHY_GOOD_WHY_BAD.md) and [TODO.md](../TODO.md).
+Reading: v3 loss fell but exact_match stuck at 0.200. **v4** adds ~371 identical short-gold paraphrases (450 train / 10 eval, overlap 0) and bumps `max_steps` to 400. See [TODO.md](../TODO.md).
 
 ## Next week
 
-1. Scale short-fact JSONL toward hundreds before larger models
+1. Finish v4 CPU holdout; if still flat, Mac/GPU retry same pack
 2. Optional softer metric for long answers; keep exact_match for short golds
-3. GPU re-run with `configs/machina_sft.yaml`
+3. Enable Codex CI only if you set `OPENAI_API_KEY` + `ENABLE_CODEX_CI`
 
 ## Links
 

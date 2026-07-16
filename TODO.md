@@ -2,14 +2,14 @@
 
 Check in order. Analysis: [logs/WHY_GOOD_WHY_BAD.md](logs/WHY_GOOD_WHY_BAD.md) · Run path: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
 
-**Status snapshot:** CPU short-fact boost (79 train / 10 eval, 200 steps) still **`exact_match = 0.200`** LoRA = base. Near-misses improved (`visitor:soft:memory`, `paradigm/centaur`) but not exact. Mac run can retry the same pack.
+**Status snapshot:** Short-fact pack **v4** = **450 train / 10 eval**, `max_steps: 400`. Prior v3 (79/10, 200 steps) stayed at **`exact_match = 0.200`**. This PR adds hundreds of identical short golds for miss paths/names, then CPU retrain.
 
 ---
 
 ## A. Ship / sync
 
 - [x] Merge PR #1–#5 into `main`
-- [ ] On Mac: `git pull` latest `main` (includes short-fact boost when this PR merges)
+- [ ] On Mac: `git pull` latest `main` (includes short-fact v4 when this PR merges)
 
 ---
 
@@ -32,16 +32,16 @@ open logs/LATEST_RUN_REPORT.md
 
 ## C. Fix what is NOT good (data first) — in progress
 
-- [x] Expand short-fact paraphrases for miss targets (train **36 → 79**)
+- [x] Expand short-fact paraphrases (train **36 → 79 → 450**)
 - [x] Align eval prompts to ask for short answers (still disjoint)
-- [x] Bump `configs/machina_sft.yaml` to `max_steps: 200`
-- [x] CPU retrain + holdout (result still **0.200**; near-misses closer)
-- [ ] Mac / GPU re-run on this pack (`./run_next.sh`)
-- [ ] If still flat: add **more** identical short golds (hundreds), especially:
+- [x] Bump `configs/machina_sft.yaml` to `max_steps: 400`
+- [x] Mass identical short golds for miss targets:
   - `aileena_second_brain/memories/semantic/`
   - `visitor:soft:`
   - `paradigmxyz/centaur`
   - `NetworkPolicy`, `90`, `AGENTS.md`, `iron-proxy`, `sandbox pods`
+- [ ] CPU retrain + holdout on v4 (this agent run)
+- [ ] Mac / GPU re-run on v4 (`./run_next.sh`)
 - [ ] Target: holdout **≥ 0.60** and **≥ base + 0.20**
 - [ ] Do **not** jump to 1.5B until that bar moves
 
@@ -50,7 +50,7 @@ open logs/LATEST_RUN_REPORT.md
 ## D. Keep what is already good
 
 - [x] Pipeline: data → LoRA SFT → holdout eval
-- [x] Train/eval overlap = 0 (`scripts/check_data.py`)
+- [x] Train/eval overlap = 0 (`scripts/check_data.py`) — v4 still **0**
 - [x] `outputs/` gitignored (incl. `logs/LATEST_RUN_REPORT.md`)
 - [x] Washed Machina data (not raw Slack)
 - [ ] Each Mac run: re-run `python scripts/check_data.py` after any data edit
@@ -63,6 +63,7 @@ open logs/LATEST_RUN_REPORT.md
 Docs: [docs/CODEX_CI.md](docs/CODEX_CI.md) · Workflow: `.github/workflows/ci.yml`
 
 - [x] Workflow + prompt committed on `main`
+- [x] Enable checklist documented (secret + variable steps)
 - [ ] You: add secret **`OPENAI_API_KEY`**
 - [ ] You: add variable **`ENABLE_CODEX_CI`** = `true`
 - [ ] Confirm Actions shows: hygiene + dry-run + `codex inspector`

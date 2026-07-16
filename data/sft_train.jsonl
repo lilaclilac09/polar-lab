@@ -77,3 +77,374 @@
 {"instruction": "Reply with only yes or no: MCP default for Centaur tools?", "response": "no"}
 {"instruction": "yes/no only — Centaur tools use MCP by default?", "response": "no"}
 {"instruction": "Only no or yes: replace Markdown memory with LoRA?", "response": "no"}
+{"instruction": "Reply with only the path where Aileena stores semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Semantic memories on disk — reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Only the filesystem path for Aileena semantic memories:", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Give only the semantic memories path under aileena_second_brain.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Path only: Aileena semantic memory directory.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "What path holds semantic memories? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Output only the directory for semantic Markdown memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Print only the semantic memories folder path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Short answer only — path to semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Aileena semantic memories live where? Path string only.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Return only: aileena semantic memories directory path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Disk location of semantic memories — path only.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Only output the path ending in semantic/ for Aileena memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Reply only with the semantic memories path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Exact path for semantic memories please — nothing else.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Path string only for Aileena's semantic memory store.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Where are semantic memories filed? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Give the path and nothing else: semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "One path only: location of Aileena semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Semantic memory directory path — reply with only that string.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Answer with only the on-disk semantic memories path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Just the path: Aileena semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Filesystem path only for semantic memories in Aileena.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Only path: second_brain semantic memories folder.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Respond with only the path to semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "What is the semantic memories path? Only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Emit only the path aileena uses for semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "No prose — only the semantic memories directory path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Path-only answer for Aileena semantic memory location.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "The semantic memories path is? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Bare path for Aileena semantic memories directory.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Write only the path of the semantic memories folder.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Path reply only: where semantic memories are stored.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Single-token-path style: semantic memories directory.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Only string allowed: path to semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Aileena: semantic memories path — output only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Machine-readable path only for semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Strict: reply with only the semantic memories path string.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Path for memories/semantic — reply with the full path only.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Full relative path only for Aileena semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Reply with only the Redis prefix for visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Soft memory key prefix — reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Only the Redis key prefix for soft memory:", "response": "visitor:soft:"}
+{"instruction": "What prefix keys soft memory? Reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Output only the visitor soft-memory Redis prefix.", "response": "visitor:soft:"}
+{"instruction": "Print only the soft memory Redis prefix.", "response": "visitor:soft:"}
+{"instruction": "Prefix only: per-visitor soft memory in Redis.", "response": "visitor:soft:"}
+{"instruction": "Redis soft-memory prefix string only.", "response": "visitor:soft:"}
+{"instruction": "Give only the key prefix used for soft memory.", "response": "visitor:soft:"}
+{"instruction": "Short answer only — Redis prefix for soft memory.", "response": "visitor:soft:"}
+{"instruction": "Visitor soft memory uses which Redis prefix? Prefix only.", "response": "visitor:soft:"}
+{"instruction": "Return only the soft memory Redis key prefix.", "response": "visitor:soft:"}
+{"instruction": "Exact Redis prefix for soft memory — nothing else.", "response": "visitor:soft:"}
+{"instruction": "Reply only with the soft-memory Redis prefix.", "response": "visitor:soft:"}
+{"instruction": "Bare prefix for Aileena visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Soft memory Redis namespace prefix — reply with only that.", "response": "visitor:soft:"}
+{"instruction": "Only output the Redis prefix ending with soft:", "response": "visitor:soft:"}
+{"instruction": "What is the soft memory Redis prefix? Only the prefix.", "response": "visitor:soft:"}
+{"instruction": "One string only: visitor soft memory Redis prefix.", "response": "visitor:soft:"}
+{"instruction": "Emit only visitor soft memory key prefix.", "response": "visitor:soft:"}
+{"instruction": "No explanation — only the Redis soft memory prefix.", "response": "visitor:soft:"}
+{"instruction": "Strict: reply with only the soft memory key prefix.", "response": "visitor:soft:"}
+{"instruction": "Write only the Redis prefix for soft visitor memory.", "response": "visitor:soft:"}
+{"instruction": "Machine answer: soft memory Redis prefix only.", "response": "visitor:soft:"}
+{"instruction": "Prefix string only for visitor:soft memory keys.", "response": "visitor:soft:"}
+{"instruction": "Aileena soft memory Redis prefix — output only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Just the prefix: soft memory Redis keys.", "response": "visitor:soft:"}
+{"instruction": "Respond with only the Redis prefix for soft memory.", "response": "visitor:soft:"}
+{"instruction": "Soft-memory Redis key prefix please — prefix only.", "response": "visitor:soft:"}
+{"instruction": "Only prefix allowed: visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Path-style answer but for Redis: soft memory prefix only.", "response": "visitor:soft:"}
+{"instruction": "Digits none — reply with only the soft memory prefix.", "response": "visitor:soft:"}
+{"instruction": "Key prefix only for per-visitor soft entries.", "response": "visitor:soft:"}
+{"instruction": "Redis: soft memory prefix — reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Output the soft memory prefix and nothing else.", "response": "visitor:soft:"}
+{"instruction": "The soft memory Redis prefix is? Prefix only.", "response": "visitor:soft:"}
+{"instruction": "Bare Redis soft-memory prefix string.", "response": "visitor:soft:"}
+{"instruction": "Single answer: Redis prefix visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Only: Redis prefix storing soft memory.", "response": "visitor:soft:"}
+{"instruction": "Prefix-only response for soft memory keys.", "response": "visitor:soft:"}
+{"instruction": "Reply with only the Centaur GitHub org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur repository slug — reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Only the GitHub org/repo for Centaur:", "response": "paradigmxyz/centaur"}
+{"instruction": "What is Centaur's GitHub path? Reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Output only paradigm Centaur repo as org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Print only the Centaur GitHub identifier.", "response": "paradigmxyz/centaur"}
+{"instruction": "Org/repo only for the Centaur project.", "response": "paradigmxyz/centaur"}
+{"instruction": "GitHub slug only: Centaur under Paradigm.", "response": "paradigmxyz/centaur"}
+{"instruction": "Give only the Centaur repository org/name.", "response": "paradigmxyz/centaur"}
+{"instruction": "Short answer only — Centaur org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur lives at which GitHub org/repo? Org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Return only the Centaur GitHub org/repo string.", "response": "paradigmxyz/centaur"}
+{"instruction": "Exact org/repo for Centaur — nothing else.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply only with Centaur's GitHub org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Bare org/repo for Paradigm Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur GitHub path — reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Only output the org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "What org/repo is Centaur? Only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "One string only: Centaur GitHub org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Emit only the Centaur org/repo slug.", "response": "paradigmxyz/centaur"}
+{"instruction": "No prose — only Centaur GitHub org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Strict: reply with only the Centaur org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Write only the GitHub org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Machine answer: Centaur repository org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Paradigm Centaur repo identifier — org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Just org/repo: Centaur on GitHub.", "response": "paradigmxyz/centaur"}
+{"instruction": "Respond with only the Centaur org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur repo name with org — org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Only org/repo allowed for Centaur GitHub.", "response": "paradigmxyz/centaur"}
+{"instruction": "GitHub Centaur coordinates — reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "The Centaur GitHub org/repo is? Org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Bare string org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Single answer: Centaur GitHub org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Output Centaur org/repo and nothing else.", "response": "paradigmxyz/centaur"}
+{"instruction": "Repo slug only for Centaur (org/repo form).", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur: GitHub org/repo — output only that.", "response": "paradigmxyz/centaur"}
+{"instruction": "Identifier only: Centaur org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Path on GitHub for Centaur — org/repo only.", "response": "paradigmxyz/centaur"}
+{"instruction": "Only the slash-separated org/repo for Centaur.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply with only the Centaur repository org/repo string.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply with only NetworkPolicy for Centaur egress deny.", "response": "NetworkPolicy"}
+{"instruction": "Which object blocks sandbox egress? Reply with only the K8s kind.", "response": "NetworkPolicy"}
+{"instruction": "Only the Kubernetes object name for default-deny egress:", "response": "NetworkPolicy"}
+{"instruction": "Centaur sandbox egress deny — object name only.", "response": "NetworkPolicy"}
+{"instruction": "Output only the K8s kind that denies sandbox internet.", "response": "NetworkPolicy"}
+{"instruction": "Print only the egress-blocking Kubernetes object.", "response": "NetworkPolicy"}
+{"instruction": "Object name only: blocks arbitrary sandbox egress.", "response": "NetworkPolicy"}
+{"instruction": "K8s kind only for Centaur default-deny egress.", "response": "NetworkPolicy"}
+{"instruction": "Give only the Kubernetes resource that denies egress.", "response": "NetworkPolicy"}
+{"instruction": "Short answer only — egress deny object name.", "response": "NetworkPolicy"}
+{"instruction": "What blocks sandbox internet? Reply with only the object name.", "response": "NetworkPolicy"}
+{"instruction": "Return only the Kubernetes egress deny kind.", "response": "NetworkPolicy"}
+{"instruction": "Exact K8s object name for egress deny — nothing else.", "response": "NetworkPolicy"}
+{"instruction": "Reply only with the egress deny Kubernetes object.", "response": "NetworkPolicy"}
+{"instruction": "Bare Kubernetes object name for sandbox egress deny.", "response": "NetworkPolicy"}
+{"instruction": "Default-deny egress uses which object? Name only.", "response": "NetworkPolicy"}
+{"instruction": "Only output the Kubernetes object for egress deny.", "response": "NetworkPolicy"}
+{"instruction": "What K8s object denies egress? Only the name.", "response": "NetworkPolicy"}
+{"instruction": "One word/name only: egress deny object.", "response": "NetworkPolicy"}
+{"instruction": "Emit only the Kubernetes object name for egress deny.", "response": "NetworkPolicy"}
+{"instruction": "No prose — only the egress deny object name.", "response": "NetworkPolicy"}
+{"instruction": "Strict: reply with only the Kubernetes object name.", "response": "NetworkPolicy"}
+{"instruction": "Write only the object that default-denies egress.", "response": "NetworkPolicy"}
+{"instruction": "Machine answer: K8s egress deny object only.", "response": "NetworkPolicy"}
+{"instruction": "Sandbox cannot reach internet because of? Object name only.", "response": "NetworkPolicy"}
+{"instruction": "Just the object name: Centaur egress deny.", "response": "NetworkPolicy"}
+{"instruction": "Respond with only the Kubernetes egress deny kind.", "response": "NetworkPolicy"}
+{"instruction": "Egress policy object in Centaur — name only.", "response": "NetworkPolicy"}
+{"instruction": "Only the kind name for default-deny Network…", "response": "NetworkPolicy"}
+{"instruction": "Kubernetes object preventing sandbox egress — name only.", "response": "NetworkPolicy"}
+{"instruction": "The egress deny object is? Reply with only the name.", "response": "NetworkPolicy"}
+{"instruction": "Bare name of the egress-blocking K8s object.", "response": "NetworkPolicy"}
+{"instruction": "Single answer: Kubernetes object for egress deny.", "response": "NetworkPolicy"}
+{"instruction": "Output the egress deny object name and nothing else.", "response": "NetworkPolicy"}
+{"instruction": "Centaur: egress deny object — output only the name.", "response": "NetworkPolicy"}
+{"instruction": "Identifier only: K8s object denying sandbox egress.", "response": "NetworkPolicy"}
+{"instruction": "Name-only response for the egress deny resource.", "response": "NetworkPolicy"}
+{"instruction": "Which kind enforces default-deny egress? Kind only.", "response": "NetworkPolicy"}
+{"instruction": "Only the Kubernetes kind string for egress deny.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only the Centaur sandbox egress deny object name.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only the soft-memory TTL in days (number).", "response": "90"}
+{"instruction": "Soft memory TTL days — digits only.", "response": "90"}
+{"instruction": "Only the day count for visitor soft memory TTL:", "response": "90"}
+{"instruction": "How many days is soft memory TTL? Reply with only the number.", "response": "90"}
+{"instruction": "Output only the TTL days for soft memory.", "response": "90"}
+{"instruction": "Print only the soft-memory TTL day count.", "response": "90"}
+{"instruction": "Number only: Aileena soft memory TTL days.", "response": "90"}
+{"instruction": "TTL days for soft memory — digits only.", "response": "90"}
+{"instruction": "Give only the numeric TTL days.", "response": "90"}
+{"instruction": "Short answer only — soft memory TTL days.", "response": "90"}
+{"instruction": "Visitor soft memory lasts how many days? Number only.", "response": "90"}
+{"instruction": "Return only the TTL day number for soft memory.", "response": "90"}
+{"instruction": "Exact day count for soft TTL — nothing else.", "response": "90"}
+{"instruction": "Reply only with the soft memory TTL days number.", "response": "90"}
+{"instruction": "Bare number for soft memory TTL days.", "response": "90"}
+{"instruction": "Soft memory sliding TTL days — reply with only the number.", "response": "90"}
+{"instruction": "Only output the digits for soft memory TTL.", "response": "90"}
+{"instruction": "What is soft memory TTL in days? Only the number.", "response": "90"}
+{"instruction": "One number only: soft memory TTL days.", "response": "90"}
+{"instruction": "Emit only the soft memory TTL day count.", "response": "90"}
+{"instruction": "No prose — only the TTL days number.", "response": "90"}
+{"instruction": "Strict: reply with only the TTL days digits.", "response": "90"}
+{"instruction": "Write only the number of TTL days for soft memory.", "response": "90"}
+{"instruction": "Machine answer: soft memory TTL days only.", "response": "90"}
+{"instruction": "Days until soft memory expires — number only.", "response": "90"}
+{"instruction": "Just the number: soft memory TTL.", "response": "90"}
+{"instruction": "Respond with only the TTL days for soft memory.", "response": "90"}
+{"instruction": "Soft-memory TTL please — digits only.", "response": "90"}
+{"instruction": "Only digits allowed: soft memory TTL days.", "response": "90"}
+{"instruction": "Aileena soft TTL days — output only the number.", "response": "90"}
+{"instruction": "The soft memory TTL days is? Number only.", "response": "90"}
+{"instruction": "Bare digits for visitor soft memory TTL.", "response": "90"}
+{"instruction": "Single answer: soft memory TTL day count.", "response": "90"}
+{"instruction": "Output TTL days and nothing else.", "response": "90"}
+{"instruction": "Numeric-only: days of soft memory TTL.", "response": "90"}
+{"instruction": "TTL: soft memory days — number only.", "response": "90"}
+{"instruction": "Integer only for soft memory TTL days.", "response": "90"}
+{"instruction": "Day count only for soft memory retention.", "response": "90"}
+{"instruction": "Only the integer TTL days for soft memory.", "response": "90"}
+{"instruction": "Reply with only the numeric soft-memory TTL days.", "response": "90"}
+{"instruction": "Reply with only what the Centaur warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Warm pool keeps ready — reply with only two words.", "response": "sandbox pods"}
+{"instruction": "Only the warm-pool resource Centaur pre-spawns:", "response": "sandbox pods"}
+{"instruction": "What does warm pool pre-spawn? Reply with only two words.", "response": "sandbox pods"}
+{"instruction": "Output only the warm pool pre-spawned units.", "response": "sandbox pods"}
+{"instruction": "Print only what warm pool prepares ahead of time.", "response": "sandbox pods"}
+{"instruction": "Two words only: Centaur warm pool contents.", "response": "sandbox pods"}
+{"instruction": "Warm pool resource — reply with only those two words.", "response": "sandbox pods"}
+{"instruction": "Give only what is pre-spawned in the warm pool.", "response": "sandbox pods"}
+{"instruction": "Short answer only — warm pool pre-spawns what.", "response": "sandbox pods"}
+{"instruction": "Centaur warm pool pre-spawns? Two words only.", "response": "sandbox pods"}
+{"instruction": "Return only the warm-pool pre-spawned resource.", "response": "sandbox pods"}
+{"instruction": "Exact warm pool units — nothing else.", "response": "sandbox pods"}
+{"instruction": "Reply only with the warm pool pre-spawned thing.", "response": "sandbox pods"}
+{"instruction": "Bare two-word answer for warm pool contents.", "response": "sandbox pods"}
+{"instruction": "Pre-spawned warm pool units — reply with only that.", "response": "sandbox pods"}
+{"instruction": "Only output what warm pool keeps hot.", "response": "sandbox pods"}
+{"instruction": "What is pre-spawned? Only the two-word answer.", "response": "sandbox pods"}
+{"instruction": "One phrase only: warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Emit only the warm pool resource name (two words).", "response": "sandbox pods"}
+{"instruction": "No prose — only the warm pool pre-spawn answer.", "response": "sandbox pods"}
+{"instruction": "Strict: reply with only the warm pool units.", "response": "sandbox pods"}
+{"instruction": "Write only what Centaur warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Machine answer: warm pool pre-spawn target only.", "response": "sandbox pods"}
+{"instruction": "Warm pool avoids cold start by pre-spawning? Two words.", "response": "sandbox pods"}
+{"instruction": "Just two words: warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Respond with only the warm pool pre-spawned resource.", "response": "sandbox pods"}
+{"instruction": "Warm-pool contents please — two words only.", "response": "sandbox pods"}
+{"instruction": "Only two words allowed: warm pool resource.", "response": "sandbox pods"}
+{"instruction": "Centaur: warm pool pre-spawns — output only that phrase.", "response": "sandbox pods"}
+{"instruction": "The warm pool pre-spawns? Reply with only two words.", "response": "sandbox pods"}
+{"instruction": "Bare phrase for warm pool pre-spawned units.", "response": "sandbox pods"}
+{"instruction": "Single answer: warm pool pre-spawned resource.", "response": "sandbox pods"}
+{"instruction": "Output warm pool units and nothing else.", "response": "sandbox pods"}
+{"instruction": "Phrase-only: what warm pool keeps ready.", "response": "sandbox pods"}
+{"instruction": "Pre-spawn target of warm pool — two words only.", "response": "sandbox pods"}
+{"instruction": "Only the resource phrase for Centaur warm pool.", "response": "sandbox pods"}
+{"instruction": "Warm pool: what is ready? Two words only.", "response": "sandbox pods"}
+{"instruction": "Only the two-word warm pool answer.", "response": "sandbox pods"}
+{"instruction": "Reply with only the Centaur warm-pool pre-spawned resource.", "response": "sandbox pods"}
+{"instruction": "Reply with only the Centaur sandbox instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Sandbox instructions file — reply with only the filename.", "response": "AGENTS.md"}
+{"instruction": "Only the filename harnesses read for instructions:", "response": "AGENTS.md"}
+{"instruction": "What instructions file is in the sandbox? Filename only.", "response": "AGENTS.md"}
+{"instruction": "Output only the baked instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Print only the Centaur instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Filename only: Centaur sandbox project instructions.", "response": "AGENTS.md"}
+{"instruction": "Instructions file name — reply with only the filename.", "response": "AGENTS.md"}
+{"instruction": "Give only the sandbox instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Short answer only — instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Centaur sandbox instructions file? Filename only.", "response": "AGENTS.md"}
+{"instruction": "Return only the instructions filename in sandbox.", "response": "AGENTS.md"}
+{"instruction": "Exact instructions filename — nothing else.", "response": "AGENTS.md"}
+{"instruction": "Reply only with the sandbox instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Bare filename for Centaur harness instructions.", "response": "AGENTS.md"}
+{"instruction": "Harness instructions file — reply with only the name.", "response": "AGENTS.md"}
+{"instruction": "Only output the instructions filename.", "response": "AGENTS.md"}
+{"instruction": "What filename holds instructions? Only the filename.", "response": "AGENTS.md"}
+{"instruction": "One filename only: sandbox instructions.", "response": "AGENTS.md"}
+{"instruction": "Emit only the Centaur instructions filename.", "response": "AGENTS.md"}
+{"instruction": "No prose — only the instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Strict: reply with only the instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Write only the sandbox instructions file name.", "response": "AGENTS.md"}
+{"instruction": "Machine answer: instructions filename only.", "response": "AGENTS.md"}
+{"instruction": "Baked instructions in sandbox — filename only.", "response": "AGENTS.md"}
+{"instruction": "Just the filename: Centaur instructions.", "response": "AGENTS.md"}
+{"instruction": "Respond with only the instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Instructions markdown filename please — filename only.", "response": "AGENTS.md"}
+{"instruction": "Only filename allowed: Centaur sandbox instructions.", "response": "AGENTS.md"}
+{"instruction": "Centaur: instructions file — output only the filename.", "response": "AGENTS.md"}
+{"instruction": "The instructions filename is? Filename only.", "response": "AGENTS.md"}
+{"instruction": "Bare filename string for sandbox instructions.", "response": "AGENTS.md"}
+{"instruction": "Single answer: Centaur instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Output the instructions filename and nothing else.", "response": "AGENTS.md"}
+{"instruction": "Filename-only: harness instructions in sandbox.", "response": "AGENTS.md"}
+{"instruction": "Sandbox AGENTS-style file — reply with only the filename.", "response": "AGENTS.md"}
+{"instruction": "Only the .md instructions filename in Centaur sandbox.", "response": "AGENTS.md"}
+{"instruction": "Instructions path basename only.", "response": "AGENTS.md"}
+{"instruction": "Only the instructions file basename.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the Centaur sandbox instructions file name.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the Centaur credential egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Credential egress proxy — reply with only the name.", "response": "iron-proxy"}
+{"instruction": "Only the proxy name for Centaur credential egress:", "response": "iron-proxy"}
+{"instruction": "What proxy injects credentials on egress? Name only.", "response": "iron-proxy"}
+{"instruction": "Output only the Centaur egress credential proxy.", "response": "iron-proxy"}
+{"instruction": "Print only the credential egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Proxy name only: Centaur credential egress.", "response": "iron-proxy"}
+{"instruction": "Egress credential proxy — reply with only the name.", "response": "iron-proxy"}
+{"instruction": "Give only the Centaur iron egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Short answer only — credential proxy name.", "response": "iron-proxy"}
+{"instruction": "Centaur credential egress proxy? Name only.", "response": "iron-proxy"}
+{"instruction": "Return only the egress proxy that injects credentials.", "response": "iron-proxy"}
+{"instruction": "Exact proxy name for credential egress — nothing else.", "response": "iron-proxy"}
+{"instruction": "Reply only with the credential egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Bare name of Centaur credential egress proxy.", "response": "iron-proxy"}
+{"instruction": "Credential-injecting egress proxy — name only.", "response": "iron-proxy"}
+{"instruction": "Only output the Centaur egress proxy name.", "response": "iron-proxy"}
+{"instruction": "What is the egress proxy called? Only the name.", "response": "iron-proxy"}
+{"instruction": "One name only: Centaur credential egress proxy.", "response": "iron-proxy"}
+{"instruction": "Emit only the credential egress proxy name.", "response": "iron-proxy"}
+{"instruction": "No prose — only the egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Strict: reply with only the proxy name.", "response": "iron-proxy"}
+{"instruction": "Write only the Centaur credential egress proxy.", "response": "iron-proxy"}
+{"instruction": "Machine answer: credential egress proxy name only.", "response": "iron-proxy"}
+{"instruction": "Sandboxes reach APIs via which proxy? Name only.", "response": "iron-proxy"}
+{"instruction": "Just the name: Centaur egress credential proxy.", "response": "iron-proxy"}
+{"instruction": "Respond with only the credential egress proxy.", "response": "iron-proxy"}
+{"instruction": "Egress proxy name please — name only.", "response": "iron-proxy"}
+{"instruction": "Only name allowed: Centaur credential proxy.", "response": "iron-proxy"}
+{"instruction": "Centaur: credential egress proxy — output only the name.", "response": "iron-proxy"}
+{"instruction": "The credential egress proxy is? Name only.", "response": "iron-proxy"}
+{"instruction": "Bare proxy name for Centaur credential egress.", "response": "iron-proxy"}
+{"instruction": "Single answer: Centaur credential egress proxy name.", "response": "iron-proxy"}
+{"instruction": "Output the proxy name and nothing else.", "response": "iron-proxy"}
+{"instruction": "Name-only: Centaur iron egress proxy.", "response": "iron-proxy"}
+{"instruction": "Proxy used for credential egress — name only.", "response": "iron-proxy"}
+{"instruction": "Only the service name of the egress credential proxy.", "response": "iron-proxy"}
+{"instruction": "Credential egress via? Reply with only the proxy name.", "response": "iron-proxy"}
+{"instruction": "Only the egress proxy service name.", "response": "iron-proxy"}
+{"instruction": "Reply with only the Centaur credential egress proxy name string.", "response": "iron-proxy"}
+{"instruction": "Reply with only yes or no: should LoRA replace Markdown memory?", "response": "no"}
+{"instruction": "yes/no only — replace Aileena Markdown memory with LoRA?", "response": "no"}
+{"instruction": "Only yes or no: LoRA instead of Markdown memory layer?", "response": "no"}
+{"instruction": "Should weights replace Markdown memory? Reply with only yes or no.", "response": "no"}
+{"instruction": "Output only yes or no: LoRA replaces Aileena memory files?", "response": "no"}
+{"instruction": "Print only yes/no: drop Markdown memory for LoRA?", "response": "no"}
+{"instruction": "yes or no only: LoRA supersedes Markdown memory?", "response": "no"}
+{"instruction": "Replace memory Markdown via LoRA? Reply yes or no only.", "response": "no"}
+{"instruction": "Only yes/no — LoRA as Markdown memory replacement?", "response": "no"}
+{"instruction": "Binary only: does LoRA replace Aileena Markdown memory?", "response": "no"}
+{"instruction": "Reply with only yes or no: Centaur tools default to MCP?", "response": "no"}
+{"instruction": "yes/no only — default Centaur tool protocol is MCP?", "response": "no"}
+{"instruction": "Only yes or no: MCP is Centaur's default tool path?", "response": "no"}
+{"instruction": "Does Centaur default tools to MCP? Reply with only yes or no.", "response": "no"}
+{"instruction": "Output only yes or no: Centaur uses MCP by default for tools?", "response": "no"}
+{"instruction": "Print only yes/no: MCP default in Centaur tools?", "response": "no"}
+{"instruction": "yes or no only: Centaur tool calling defaults to MCP?", "response": "no"}
+{"instruction": "MCP by default for Centaur tools? Reply yes or no only.", "response": "no"}
+{"instruction": "Only yes/no — Centaur defaults to MCP tools?", "response": "no"}
+{"instruction": "Binary only: is MCP the Centaur default for tools?", "response": "no"}
+{"instruction": "Reply with only yes or no: train Polar Lab on raw Slack dumps?", "response": "no"}
+{"instruction": "yes/no only — use raw Slack for SFT weights?", "response": "no"}
+{"instruction": "Only yes or no: raw Slack dumps for Polar Lab training?", "response": "no"}
+{"instruction": "Should Polar Lab train on raw Slack? Reply with only yes or no.", "response": "no"}
+{"instruction": "Output only yes or no: ingest raw Slack into SFT?", "response": "no"}
+{"instruction": "Print only yes/no: raw Slack as SFT source?", "response": "no"}
+{"instruction": "yes or no only: raw Slack for weight updates?", "response": "no"}
+{"instruction": "Raw Slack for LoRA? Reply yes or no only.", "response": "no"}
+{"instruction": "Only yes/no — Polar Lab trains on raw Slack?", "response": "no"}
+{"instruction": "Binary only: are raw Slack dumps OK for SFT?", "response": "no"}
+{"instruction": "Where are Aileena semantic memories stored on disk? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Where is the Aileena semantic memory directory? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "On disk, where do semantic memories live? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Which path stores Aileena semantic memories? Reply with only the path.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "What Redis prefix stores visitor soft memory? Reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "What key prefix is used for visitor soft memory? Reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Which Redis prefix holds per-visitor soft memory? Reply with only the prefix.", "response": "visitor:soft:"}
+{"instruction": "Name the GitHub org/repo for Centaur. Reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Name Centaur's Paradigm GitHub path. Reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "What is the Paradigm org/repo for Centaur? Reply with only org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "In Centaur, what Kubernetes object blocks sandbox egress? Reply with only the object name.", "response": "NetworkPolicy"}
+{"instruction": "What Kubernetes object blocks Centaur sandbox egress? Reply with only the object name.", "response": "NetworkPolicy"}
+{"instruction": "What blocks Centaur sandboxes from arbitrary egress? Reply with only the Kubernetes object name.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only the soft memory TTL days for Aileena visitors.", "response": "90"}
+{"instruction": "Reply with only TTL days for visitor soft memory.", "response": "90"}
+{"instruction": "Reply with only days of TTL on Aileena soft memory.", "response": "90"}
+{"instruction": "Reply with only what the warm pool in Centaur pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Reply with only the resource Centaur warm pool pre-spawns.", "response": "sandbox pods"}
+{"instruction": "Reply with only the instructions filename inside Centaur sandboxes.", "response": "AGENTS.md"}
+{"instruction": "Reply with only the Centaur egress credential proxy name.", "response": "iron-proxy"}
+{"instruction": "Reply with only the name of Centaur's credential egress proxy.", "response": "iron-proxy"}
