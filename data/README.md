@@ -6,7 +6,7 @@ Training and holdout JSONL for LoRA SFT / DPO. **English only.**
 
 | File | Source | Notes |
 |------|--------|-------|
-| `sft_train.jsonl` | Washed Q&A from `lilaclilac09/aileen_machina_01` (second-brain memory docs + Centaur research note) | Not raw Slack; hand-curated short answers |
+| `sft_train.jsonl` | Washed Q&A from `lilaclilac09/aileen_machina_01` (second-brain memory docs + Centaur research note) | Not raw Slack; **v4 ≈ 450** short-fact paraphrases (identical golds for paths/names) |
 | `sft_eval.jsonl` | Same domain, **disjoint** prompts | Never used in SFT training |
 | `dpo_train.jsonl` | Preference pairs (memory vs weight dump) | Enable with `dpo.enabled: true` |
 | `rl_prompts.jsonl` | Tiny RL scaffold prompts | Optional |
