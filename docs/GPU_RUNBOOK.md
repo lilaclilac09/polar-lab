@@ -3,6 +3,8 @@
 Copy-paste path for **NVIDIA CUDA** hosts (cloud or local).  
 CPU results from 2026-07-15 are the baseline to beat.
 
+**Start here next session:** [NEXT_RUN.md](NEXT_RUN.md) (all paths + commands in one page).
+
 ## 0) Prerequisites
 
 ```bash
