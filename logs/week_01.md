@@ -48,13 +48,14 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 24 | 2.41 | 1.96 | **0.125** (1/8) |
 | 2026-07-15 | `machina_sft.yaml` + short-fact v2 | 120 | cpu | 36 | 2.35 | 1.64 | **0.200** (2/10) |
 | 2026-07-16 | `machina_sft.yaml` short-fact v3 (79 rows) | 200 | cpu | 79 | 1.81 | 1.17 | **0.200** (2/10); base also 0.200; near-misses closer |
-| 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | _(pending)_ | _(pending)_ | _(pending CPU retrain)_ |
+| 2026-07-16 | Mac MPS, old main short-fact (~36 rows) | 120 | mps | 36 | ~2.38 | ~1.48 | **0.200** (2/10) = base; only yes/no hits |
+| 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | **1.16** | **0.69** | **LoRA 1.000** / base **0.200** (Δ +0.800) |
 
-Reading: v3 loss fell but exact_match stuck at 0.200. **v4** adds ~371 identical short-gold paraphrases (450 train / 10 eval, overlap 0) and bumps `max_steps` to 400. See [TODO.md](../TODO.md).
+Reading: **v4 worked.** Hundreds of identical short golds + 400 steps → holdout perfect on CPU; base still 0.200. Mac first run used the old 36-row pack — pull PR #6 and re-run. See [TODO.md](../TODO.md).
 
 ## Next week
 
-1. Finish v4 CPU holdout; if still flat, Mac/GPU retry same pack
+1. Mac `./run_next.sh` on v4 (confirm `train_rows: 450`, expect score ≫ 0.20)
 2. Optional softer metric for long answers; keep exact_match for short golds
 3. Enable Codex CI only if you set `OPENAI_API_KEY` + `ENABLE_CODEX_CI`
 

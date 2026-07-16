@@ -1,11 +1,17 @@
 # Why this is good / why this is not good
 
-**Date:** 2026-07-16 (analysis of CPU runs from 2026-07-15)  
+**Date:** 2026-07-16 (updated after short-fact **v4**)  
 **Repo:** https://github.com/lilaclilac09/polar-lab  
-**Final holdout:** `exact_match = 0.200` (2/10) on Machina short-fact pack  
-**Compare:** arithmetic demo earlier hit `0.667` (2/3)
 
-This note explains **what worked**, **what failed**, and **why** — so a Mac/GPU re-run knows what to fix.
+| Pack | Train / steps | Holdout LoRA | Holdout base |
+|------|---------------|-------------:|-------------:|
+| v2/v3 short-fact | 36–79 / 120–200 | **0.200** | 0.200 |
+| Mac MPS (old main ~36) | 36 / 120 | **0.200** | 0.200 |
+| **v4** identical short golds | **450 / 400** | **1.000** | 0.200 |
+
+**Update:** v4 proves the diagnosis — volume of *identical short answers* was the missing piece. Arithmetic demo earlier hit `0.667` (2/3).
+
+This note still explains **what failed on small packs** and **why**, so Mac re-runs know what fixed it.
 
 ---
 
@@ -15,11 +21,12 @@ This note explains **what worked**, **what failed**, and **why** — so a Mac/GP
 |------|---------|-----|
 | Training **pipeline** | **Good** | Data → LoRA SFT → holdout eval runs end-to-end; loss falls |
 | Arithmetic **smoke** | **Good** | Short numeric answers moved (`7*6`→`42`, holdout 0.667) |
-| Machina/Centaur **facts** | **Not good yet** | Strict string match mostly fails; model paraphrases or invents |
-| Eval **honesty** | **Good** | Flat score is a real signal, not a silent fake win |
-| Data **volume / format** | **Not good enough** | ~36 train rows; many golds are brittle paths/names |
+| Machina/Centaur **facts (≤79 rows)** | **Not good** | Strict string match mostly fails; model paraphrases or invents |
+| Machina/Centaur **facts (v4 450 rows)** | **Good** | Holdout `exact_match = 1.000` vs base 0.200 |
+| Eval **honesty** | **Good** | Flat score on small packs was real; v4 lift is also real |
+| Data **volume / format** | **Fixed in v4** | Hundreds of identical short golds for paths/names |
 
-**Polar Lab is doing its job:** it showed that the loop works, and that current domain data is too weak for `exact_match`.
+**Polar Lab did its job:** small packs showed the loop works but data was weak; v4 moved behavior on the same holdout.
 
 ---
 
@@ -33,7 +40,7 @@ We can:
 2. LoRA-tune `Qwen2.5-0.5B-Instruct`
 3. Score never-seen prompts with `scripts/05_eval_holdout.py`
 
-`train_loss` fell (e.g. ~4.1 → ~2.3 across Machina runs). That means the adapter is fitting *something*.
+`train_loss` fell (e.g. ~4.1 → ~2.3 on small packs; v4 final train_loss ≈ **1.16**, eval_loss ≈ **0.69**).
 
 **Why that matters:** if the plumbing were broken, loss would not move and chat/eval would crash. They did not.
 
