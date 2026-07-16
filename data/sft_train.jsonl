@@ -34,3 +34,46 @@
 {"instruction": "Reply with only the proxy name that injects Centaur credentials on egress.", "response": "iron-proxy"}
 {"instruction": "Warm pool in Centaur — reply with only the resource that is pre-spawned.", "response": "sandbox pods"}
 {"instruction": "Reply with only: site domain for Aileena Machina.", "response": "aileena.xyz"}
+{"instruction": "Reply with only the on-disk path for Aileena semantic memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Output only this path: where semantic memories live in Aileena.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Semantic memories folder path only:", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Give only the directory path for Aileena semantic Markdown memories.", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Only the path string for aileena semantic memories:", "response": "aileena_second_brain/memories/semantic/"}
+{"instruction": "Reply with only the Redis key prefix for Aileena soft memory.", "response": "visitor:soft:"}
+{"instruction": "Soft memory Redis prefix only:", "response": "visitor:soft:"}
+{"instruction": "Output only visitor soft-memory key prefix.", "response": "visitor:soft:"}
+{"instruction": "Only the Redis prefix used for per-visitor soft memory:", "response": "visitor:soft:"}
+{"instruction": "Print only: Redis prefix for visitor soft memory.", "response": "visitor:soft:"}
+{"instruction": "Reply with only paradigmxyz/centaur", "response": "paradigmxyz/centaur"}
+{"instruction": "Centaur GitHub org/repo only:", "response": "paradigmxyz/centaur"}
+{"instruction": "Output only the Centaur repository slug (org/name).", "response": "paradigmxyz/centaur"}
+{"instruction": "Only the GitHub path for Centaur under Paradigm:", "response": "paradigmxyz/centaur"}
+{"instruction": "Print only the Centaur repo identifier org/repo.", "response": "paradigmxyz/centaur"}
+{"instruction": "Reply with only NetworkPolicy", "response": "NetworkPolicy"}
+{"instruction": "Which K8s object blocks Centaur sandbox egress? Reply with only the object name.", "response": "NetworkPolicy"}
+{"instruction": "Output only the Kubernetes kind that default-denies sandbox egress.", "response": "NetworkPolicy"}
+{"instruction": "Only the resource name: default-deny egress for Centaur sandboxes.", "response": "NetworkPolicy"}
+{"instruction": "Print only: the egress deny object in Centaur sandboxes.", "response": "NetworkPolicy"}
+{"instruction": "Reply with only 90", "response": "90"}
+{"instruction": "Aileena soft memory TTL days — digits only.", "response": "90"}
+{"instruction": "Output only the TTL day count for visitor soft memory.", "response": "90"}
+{"instruction": "Only the number of days soft memory lives:", "response": "90"}
+{"instruction": "Print only the soft-memory TTL in days.", "response": "90"}
+{"instruction": "Reply with only AGENTS.md", "response": "AGENTS.md"}
+{"instruction": "Centaur sandbox instructions filename only:", "response": "AGENTS.md"}
+{"instruction": "Output only the filename harnesses read for instructions.", "response": "AGENTS.md"}
+{"instruction": "Only the instructions file name in Centaur sandbox:", "response": "AGENTS.md"}
+{"instruction": "Print only the baked instructions filename.", "response": "AGENTS.md"}
+{"instruction": "Reply with only iron-proxy", "response": "iron-proxy"}
+{"instruction": "Centaur credential egress proxy name only:", "response": "iron-proxy"}
+{"instruction": "Output only the proxy that injects Centaur credentials.", "response": "iron-proxy"}
+{"instruction": "Only the egress proxy name:", "response": "iron-proxy"}
+{"instruction": "Print only the Centaur iron proxy service name.", "response": "iron-proxy"}
+{"instruction": "Reply with only sandbox pods", "response": "sandbox pods"}
+{"instruction": "Warm pool pre-spawns what? Reply with only two words.", "response": "sandbox pods"}
+{"instruction": "Output only what Centaur warm pool keeps ready.", "response": "sandbox pods"}
+{"instruction": "Only the warm-pool resource (two words):", "response": "sandbox pods"}
+{"instruction": "Print only: pre-spawned warm pool units.", "response": "sandbox pods"}
+{"instruction": "Reply with only yes or no: MCP default for Centaur tools?", "response": "no"}
+{"instruction": "yes/no only — Centaur tools use MCP by default?", "response": "no"}
+{"instruction": "Only no or yes: replace Markdown memory with LoRA?", "response": "no"}

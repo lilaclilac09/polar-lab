@@ -47,8 +47,9 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-15 | `configs/base.yaml` | 40 | cpu | 24 | 4.11 | 3.03 | **0.125** (1/8) |
 | 2026-07-15 | `configs/machina_sft.yaml` (r=16) | 120 | cpu | 24 | 2.41 | 1.96 | **0.125** (1/8) |
 | 2026-07-15 | `machina_sft.yaml` + short-fact v2 | 120 | cpu | 36 | 2.35 | 1.64 | **0.200** (2/10) |
+| 2026-07-16 | `machina_sft.yaml` short-fact v3 (79 rows) | 200 | cpu | 79 | 1.81 | 1.17 | **0.200** (2/10); base also 0.200; near-misses closer |
 
-Reading: loss keeps falling; short-fact pack nudged exact_match 0.125 → 0.200 (both yes/no). Paths / TTL / repo strings still miss. Full write-up: [DAY_REPORT_2026-07-15.md](DAY_REPORT_2026-07-15.md).
+Reading: loss keeps falling; short-fact pack v3 still exact_match 0.200 but strings are closer (`visitor:soft:memory`, `paradigm/centaur`). Need more identical short golds or Mac/GPU retries — see [WHY_GOOD_WHY_BAD.md](WHY_GOOD_WHY_BAD.md) and [TODO.md](../TODO.md).
 
 ## Next week
 
