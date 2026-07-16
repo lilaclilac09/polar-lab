@@ -45,6 +45,7 @@ Prior English reports to compare against:
 
 - `logs/REPORT_2026-07-15.md`
 - `logs/DAY_REPORT_2026-07-15.md`
+- **`logs/WHY_GOOD_WHY_BAD.md`** ← why hits vs misses
 
 Baseline to beat: **exact_match = 0.200**.
 
