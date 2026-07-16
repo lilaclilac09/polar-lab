@@ -61,6 +61,7 @@ Reading: **v4 worked.** Hundreds of identical short golds + 400 steps → holdou
 
 ## Links
 
+- **Readable day report (2026-07-16):** [REPORT_2026-07-16.md](REPORT_2026-07-16.md)
 - Outputs (local only): `outputs/`
 - Upstream inspiration (math RL): https://github.com/ChenxinAn-fdu/POLARIS
 - Forgetting benchmark: https://github.com/paradigmxyz/sfp
