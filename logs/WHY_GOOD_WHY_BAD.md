@@ -134,3 +134,7 @@ Docs + ./run_next.sh          Not enough “reply with only” volume
 
 **Good:** the fine-tuning loop works and yes/no behavior can move.  
 **Not good:** with ~36 Machina rows, the model still won’t reliably emit exact paths and names under `exact_match` — because data is too small and golds are too brittle, not because the repo is broken.
+
+---
+
+Action checklist: [TODO.md](../TODO.md)
