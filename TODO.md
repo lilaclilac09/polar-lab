@@ -18,8 +18,9 @@ Check these off in order. Details: [docs/NEXT_RUN.md](docs/NEXT_RUN.md), [docs/G
   ./run_next.sh
   ```
 - [ ] Confirm device line prints `cuda` / `mps` / `cpu` as expected
-- [ ] Open `outputs/eval/metrics.json` and `outputs/eval/metrics_base.json`
+- [ ] Open **`logs/LATEST_RUN_REPORT.md`** (auto report) plus `outputs/eval/metrics.json` / `metrics_base.json`
 - [ ] Record a row in `logs/week_01.md` (device, steps, exact_match LoRA vs base)
+- [ ] Compare against archived report `logs/REPORT_2026-07-15.md`
 - [ ] Beat CPU baseline **exact_match = 0.200** (useful bar ≥ **0.60**)
 
 Optional:

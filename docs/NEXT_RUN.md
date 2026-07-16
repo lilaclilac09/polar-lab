@@ -36,9 +36,15 @@ Useful flags:
 
 When it finishes, open:
 
+- **`logs/LATEST_RUN_REPORT.md`** ← start here (auto-written scoreboard)
 - `outputs/eval/metrics.json` (LoRA)
 - `outputs/eval/metrics_base.json` (base)
 - Append one row to `logs/week_01.md`
+
+Prior English reports to compare against:
+
+- `logs/REPORT_2026-07-15.md`
+- `logs/DAY_REPORT_2026-07-15.md`
 
 Baseline to beat: **exact_match = 0.200**.
 

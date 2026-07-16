@@ -61,9 +61,16 @@ fi
 
 python scripts/05_eval_holdout.py --adapter outputs/sft/adapter --max-new-tokens 48
 python scripts/05_eval_holdout.py --adapter "" --metrics-out outputs/eval/metrics_base.json --max-new-tokens 48
+python scripts/write_run_report.py
 
 echo
 echo "[done] LoRA metrics:  outputs/eval/metrics.json"
 echo "[done] Base metrics:  outputs/eval/metrics_base.json"
+echo "[done] Human report:  logs/LATEST_RUN_REPORT.md"
 echo "[done] Log a row in:  logs/week_01.md"
 echo "[done] Baseline to beat: exact_match 0.200 (CPU 2026-07-15)"
+echo
+echo "Open the report:"
+echo "  open logs/LATEST_RUN_REPORT.md    # macOS"
+echo "  xdg-open logs/LATEST_RUN_REPORT.md  # Linux"
+echo "  Or just open that file in your editor."

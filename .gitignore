@@ -11,3 +11,6 @@ wandb/
 *.safetensors
 .DS_Store
 data/*.generated.jsonl
+
+# local auto report from ./run_next.sh
+logs/LATEST_RUN_REPORT.md
