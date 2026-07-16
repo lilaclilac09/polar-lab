@@ -86,21 +86,17 @@ def main() -> None:
 
     from datasets import Dataset
     from peft import LoraConfig
-    from transformers import AutoModelForCausalLM, AutoTokenizer
     from trl import SFTConfig, SFTTrainer
 
+    from utils.hub import load_causal_lm, load_tokenizer
+
     model_name = cfg["model"]["name_or_path"]
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name, trust_remote_code=cfg["model"].get("trust_remote_code", True)
-    )
+    trust = cfg["model"].get("trust_remote_code", True)
+    tokenizer = load_tokenizer(model_name, trust_remote_code=trust)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=dtype,
-        trust_remote_code=cfg["model"].get("trust_remote_code", True),
-    )
+    model = load_causal_lm(model_name, dtype=dtype, trust_remote_code=trust)
     model.to(device)
 
     lora_cfg = cfg.get("lora", {})
