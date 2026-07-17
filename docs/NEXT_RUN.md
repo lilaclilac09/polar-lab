@@ -7,25 +7,22 @@ Do not improvise file locations; everything below is the canonical path.
 
 ## Paste on your computer (fastest)
 
-After PR `#1` is merged into `main`:
-
 ```bash
 git clone https://github.com/lilaclilac09/polar-lab.git
 cd polar-lab
 chmod +x run_next.sh
-./run_next.sh
+./run_next.sh                    # Machina short-fact (default)
 ```
 
-If PR is **not** merged yet:
+**Space-engineering pack** (washed from `space-engineering-skills`):
 
 ```bash
-git clone https://github.com/lilaclilac09/polar-lab.git
-cd polar-lab
-git fetch origin cursor/polar-lab-agent-ci-9940
-git checkout cursor/polar-lab-agent-ci-9940
-chmod +x run_next.sh
-./run_next.sh
+POLAR_CONFIG=configs/space_sft.yaml ./run_next.sh
+# or: ./run_next.sh --config=configs/space_sft.yaml
+open logs/LATEST_RUN_REPORT.md
 ```
+
+See [data/space/README.md](../data/space/README.md).
 
 Useful flags:
 

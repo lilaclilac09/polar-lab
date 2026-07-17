@@ -1,0 +1,10 @@
+{"instruction": "Reply with only the received power in dBW: 1W TX, 3dB TX gain, -140dB path loss, 5dB RX gain.", "response": "-132 dBW"}
+{"instruction": "Reply with only the RSS pointing total in arcsec: knowledge 0.05 and jitter 0.07.", "response": "0.086"}
+{"instruction": "Reply with only the approximate total Delta-V in km/s for LEO 500km (28.5 deg) Hohmann to GEO with plane change at apogee.", "response": "4.3"}
+{"instruction": "For 600 km circular LEO, reply with only the approximate orbital period in minutes.", "response": "96.7"}
+{"instruction": "Reply with only the approximate max eclipse minutes for 600 km LEO (cylindrical umbra).", "response": "35"}
+{"instruction": "Size LEO battery Wh only: 50W average load, 35 min eclipse, 30% DoD, 95% discharge efficiency. Reply with only the number rounded to one decimal.", "response": "102.3"}
+{"instruction": "Reply with only the approximate propellant mass in kg for a 500 kg dry lunar lander, Isp 320s, 2500 m/s burn plus 10% margin.", "response": "725"}
+{"instruction": "Reply with only yes or no: do two parallel radios at 500 FIT each typically meet 99.9% one-year reliability?", "response": "yes"}
+{"instruction": "CubeSat loses contact >48h — reply with only the mode name the FDIR should enter.", "response": "Safe Mode"}
+{"instruction": "Reply with only the four hazard keywords for a pressurized lunar habitat, semicolon-separated.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}

@@ -1,60 +1,51 @@
 # Polar Lab — TODO
 
-Check in order. Analysis: [logs/WHY_GOOD_WHY_BAD.md](logs/WHY_GOOD_WHY_BAD.md) · Readable report: [logs/REPORT_2026-07-16.md](logs/REPORT_2026-07-16.md) · Run path: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
+Check in order. Analysis: [logs/WHY_GOOD_WHY_BAD.md](logs/WHY_GOOD_WHY_BAD.md) · Report: [logs/REPORT_2026-07-16.md](logs/REPORT_2026-07-16.md) · Run: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
 
-**Status snapshot:** **Mac MPS v4 + CPU v4** both **`exact_match = 1.000`** LoRA vs base **0.200**. Week holdout goal met.
+**Status snapshot:** Machina v4 (CPU+Mac) **`exact_match = 1.000`**. New separate domain: **space-engineering** short-fact pack (`data/space/` ~348 train / 10 eval) via `configs/space_sft.yaml`.
 
 ---
 
 ## A. Ship / sync
 
-- [x] Merge PR #1–#8 into `main`
-- [ ] On Mac (when GitHub reachable): `git pull` to get updated report
+- [x] Merge PR #1–#9 into `main`
+- [ ] Merge space pack PR; on Mac: `git pull`
 
 ---
 
 ## B. Mac local run
 
-- [x] First Mac run (36-row) → **0.200**
-- [x] Pull v4; HF timeout once; then offline Hub retry
-- [x] Mac v4 `./run_next.sh` → LoRA **1.000** / base **0.200** (mps, ~7 min, train_loss ≈ 1.16)
-- [x] `train_rows: 450` confirmed
-- [ ] When online: `git pull` + open `logs/REPORT_2026-07-16.md`
-- [x] Compare vs baseline 0.200 / CPU 1.000 — **matched CPU**
+- [x] Machina v4 → LoRA **1.000** / base **0.200**
+- [ ] Optional — train space pack:
+
+```bash
+cd ~/polar-lab && git pull
+POLAR_CONFIG=configs/space_sft.yaml ./run_next.sh
+open logs/LATEST_RUN_REPORT.md
+```
 
 ---
 
-## C. Fix what is NOT good (data first)
+## C. Domains / data
 
-- [x] Expand short-fact pack to **450** rows
-- [x] `max_steps: 400`
-- [x] CPU v4 → **1.000**
-- [x] Mac v4 → **1.000**
-- [x] Target ≥ 0.60 and ≥ base + 0.20
-- [x] Do not jump to 1.5B until bar moves (bar moved)
+- [x] Machina short-fact v4 (450/10)
+- [x] Wash space-engineering-skills evals → `data/space/` (disjoint, short golds)
+- [ ] Holdout on space pack ≥ 0.60 (CPU or Mac)
+- [ ] Do not mix space + Machina into one JSONL unless intentional
 
 ---
 
-## D. Keep what is already good
+## D. Hygiene
 
-- [x] Pipeline end-to-end
-- [x] Train/eval overlap = 0
-- [x] `outputs/` gitignored
-- [x] Washed Machina data
+- [x] `scripts/check_data.py --train … --eval …`
+- [x] Machina + space overlap = 0
 - [ ] Never commit `outputs/`
 
 ---
 
 ## E. Codex CI
 
-- [x] Docs + workflow on `main`
-- [ ] Optional: `OPENAI_API_KEY` + `ENABLE_CODEX_CI=true`
+Docs: [docs/CODEX_CI.md](docs/CODEX_CI.md)
 
----
-
-## F. Done looks like
-
-1. [x] Mac `./run_next.sh` on v4 + local `LATEST_RUN_REPORT.md`  
-2. [x] Holdout ≥ 0.60 — **1.000 on Mac and CPU**  
-3. [ ] Week log row committed (this PR)  
-4. Codex CI optional  
+- [x] Workflow + prompt on `main`
+- [ ] Optional: secret `OPENAI_API_KEY` + variable `ENABLE_CODEX_CI=true`

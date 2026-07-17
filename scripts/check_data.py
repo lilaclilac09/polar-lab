@@ -32,9 +32,35 @@ def _load_jsonl(path: Path) -> list[dict]:
 
 
 def main() -> int:
-    train_path = ROOT / "data" / "sft_train.jsonl"
-    eval_path = ROOT / "data" / "sft_eval.jsonl"
-    dpo_path = ROOT / "data" / "dpo_train.jsonl"
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Polar Lab data hygiene gates")
+    parser.add_argument(
+        "--train",
+        default="data/sft_train.jsonl",
+        help="Train JSONL (default: Machina pack)",
+    )
+    parser.add_argument(
+        "--eval",
+        default="data/sft_eval.jsonl",
+        help="Holdout JSONL (default: Machina pack)",
+    )
+    parser.add_argument(
+        "--dpo",
+        default="data/dpo_train.jsonl",
+        help="Optional DPO JSONL",
+    )
+    args = parser.parse_args()
+
+    train_path = Path(args.train)
+    if not train_path.is_absolute():
+        train_path = ROOT / train_path
+    eval_path = Path(args.eval)
+    if not eval_path.is_absolute():
+        eval_path = ROOT / eval_path
+    dpo_path = Path(args.dpo)
+    if not dpo_path.is_absolute():
+        dpo_path = ROOT / dpo_path
 
     train = _load_jsonl(train_path)
     held = _load_jsonl(eval_path)
@@ -43,8 +69,8 @@ def main() -> int:
     errors: list[str] = []
 
     for name, rows, required in (
-        ("sft_train", train, ("instruction", "prompt")),
-        ("sft_eval", held, ("instruction", "prompt")),
+        (train_path.name, train, ("instruction", "prompt")),
+        (eval_path.name, held, ("instruction", "prompt")),
     ):
         for i, row in enumerate(rows, 1):
             if not any(row.get(k) for k in required):

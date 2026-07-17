@@ -1,0 +1,348 @@
+{"instruction": "Downlink budget: 1W, +3dB TX, -140dB path, +5dB RX. Reply with only received power in dBW.", "response": "-132 dBW"}
+{"instruction": "Compute Pr in dBW only: 0 dBW + 3 - 140 + 5.", "response": "-132 dBW"}
+{"instruction": "Simple link budget received power (dBW) only: 1W TX, 3dB, -140dB, 5dB.", "response": "-132 dBW"}
+{"instruction": "Output only the received power result for 1W / 3dB / -140dB / 5dB.", "response": "-132 dBW"}
+{"instruction": "What is Pr? Reply with only the dBW value for that 1W link example.", "response": "-132 dBW"}
+{"instruction": "Link budget quiz — answer only in dBW: 1 watt +3 -140 +5.", "response": "-132 dBW"}
+{"instruction": "Print only received power dBW for the 1W CubeSat downlink toy problem.", "response": "-132 dBW"}
+{"instruction": "Only the number-with-unit: received power after 1W, 3dB, -140dB, 5dB.", "response": "-132 dBW"}
+{"instruction": "RF homework: 1W transmitter budget → reply with only Pr in dBW.", "response": "-132 dBW"}
+{"instruction": "Short answer only — downlink Pr (dBW) for 1W +3 -140 +5.", "response": "-132 dBW"}
+{"instruction": "Received power dBW only for path loss -140dB with 1W and gains 3/5.", "response": "-132 dBW"}
+{"instruction": "Give only -132-style result: dBW for 1W link with those gains.", "response": "-132 dBW"}
+{"instruction": "Machine answer: Pr dBW for 0+3-140+5.", "response": "-132 dBW"}
+{"instruction": "Strict: reply with only the dBW received power of the sample link.", "response": "-132 dBW"}
+{"instruction": "One token group: received power in dBW for the textbook 1W case.", "response": "-132 dBW"}
+{"instruction": "Falcon-ride payload RF check — only Pr dBW: 1W, 3, -140, 5.", "response": "-132 dBW"}
+{"instruction": "Calculate then reply with only dBW: TX 1W gains 3 and 5, L=-140.", "response": "-132 dBW"}
+{"instruction": "Downlink Pr? Digits and unit only.", "response": "-132 dBW"}
+{"instruction": "Only output the final Pr in dBW.", "response": "-132 dBW"}
+{"instruction": "Answer format: `<number> dBW` only for the 1W example.", "response": "-132 dBW"}
+{"instruction": "Space RF: received power dBW only.", "response": "-132 dBW"}
+{"instruction": "Bare answer for Pr (dBW).", "response": "-132 dBW"}
+{"instruction": "Link equation result only (dBW).", "response": "-132 dBW"}
+{"instruction": "Toy COMMS eval — Pr dBW only.", "response": "-132 dBW"}
+{"instruction": "communications-assessment style: Pr only.", "response": "-132 dBW"}
+{"instruction": "Pointing RSS only: sqrt(0.05^2 + 0.07^2). Reply with only three-decimal arcsec number.", "response": "0.086"}
+{"instruction": "Knowledge 0.05\" and jitter 0.07\" — reply with only RSS arcsec.", "response": "0.086"}
+{"instruction": "Telescope pointing budget RSS — number only (arcsec).", "response": "0.086"}
+{"instruction": "Output only the RSS total for 0.05 and 0.07 arcsec errors.", "response": "0.086"}
+{"instruction": "GNC quiz: RSS of 0.05 and 0.07. Reply with only the value.", "response": "0.086"}
+{"instruction": "Calculate RSS pointing error — reply with only 0.086-style number.", "response": "0.086"}
+{"instruction": "Strict number only: pointing RSS arcsec for those two terms.", "response": "0.086"}
+{"instruction": "Print only the RSS arcseconds (three decimals).", "response": "0.086"}
+{"instruction": "Does 0.05 & 0.07 meet 0.1\"? First reply with only the RSS number.", "response": "0.086"}
+{"instruction": "Short: RSS arcsec for knowledge+jitter example.", "response": "0.086"}
+{"instruction": "Machine: sqrt(0.05**2+0.07**2) rounded to three decimals.", "response": "0.086"}
+{"instruction": "Only the RSS figure used vs 0.1 arcsec requirement.", "response": "0.086"}
+{"instruction": "Pointing budget intermediate — RSS only.", "response": "0.086"}
+{"instruction": "GNC assessment toy: RSS number only.", "response": "0.086"}
+{"instruction": "Bare float: RSS pointing total.", "response": "0.086"}
+{"instruction": "Reply with only the combined pointing error (arcsec).", "response": "0.086"}
+{"instruction": "Three-decimal RSS only.", "response": "0.086"}
+{"instruction": "Error sources 0.05 and 0.07 — RSS only.", "response": "0.086"}
+{"instruction": "Output RSS without units text beyond the number.", "response": "0.086"}
+{"instruction": "Number-only answer for pointing RSS.", "response": "0.086"}
+{"instruction": "Arcsec RSS total only.", "response": "0.086"}
+{"instruction": "Compute then answer with only the RSS.", "response": "0.086"}
+{"instruction": "Stability budget RSS — digits only.", "response": "0.086"}
+{"instruction": "0.05 knowledge, 0.07 jitter → RSS?", "response": "0.086"}
+{"instruction": "Reply with only the RSS value that is under 0.1 arcsec.", "response": "0.086"}
+{"instruction": "Hohmann LEO 500km @28.5deg to GEO with plane change at apogee — reply with only approx total km/s.", "response": "4.3"}
+{"instruction": "Approx total Delta-V km/s only for that LEO→GEO + plane-change case.", "response": "4.3"}
+{"instruction": "Mission analysis: LEO to GEO Hohmann + i-change. Reply with only ~km/s total.", "response": "4.3"}
+{"instruction": "Output only the approximate combined Delta-V in km/s (~4.x).", "response": "4.3"}
+{"instruction": "Short answer: total Δv (km/s) for 500km parking to GEO with plane change.", "response": "4.3"}
+{"instruction": "GEO transfer toy problem — reply with only the total km/s figure.", "response": "4.3"}
+{"instruction": "Strict: number only for total Delta-V km/s (approx).", "response": "4.3"}
+{"instruction": "Print only approx 4.3-style km/s total.", "response": "4.3"}
+{"instruction": "Plane change at apogee included — total Δv km/s only.", "response": "4.3"}
+{"instruction": "Bare approximate km/s for LEO-GEO Hohmann with inclination fix.", "response": "4.3"}
+{"instruction": "Machine answer: total delta-v km/s ≈ ?", "response": "4.3"}
+{"instruction": "One number: km/s total for the classic LEO→GEO example.", "response": "4.3"}
+{"instruction": "Reply with only the km/s total used in the expect note (~4.3).", "response": "4.3"}
+{"instruction": "Orbit raise + plane change — total Δv number only.", "response": "4.3"}
+{"instruction": "Hohmann+plane change quiz — km/s only.", "response": "4.3"}
+{"instruction": "Approx total burn budget km/s only.", "response": "4.3"}
+{"instruction": "Digits only: GEO insertion Δv total km/s.", "response": "4.3"}
+{"instruction": "LEO 28.5° to GEO 0° — total km/s approx only.", "response": "4.3"}
+{"instruction": "mission-analysis-specialist style: total km/s only.", "response": "4.3"}
+{"instruction": "Give only the headline Delta-V km/s.", "response": "4.3"}
+{"instruction": "No steps — only final km/s.", "response": "4.3"}
+{"instruction": "Approximate combined Δv (km/s).", "response": "4.3"}
+{"instruction": "Toy Δv total for GEO transfer.", "response": "4.3"}
+{"instruction": "Answer with only 4.3-class km/s.", "response": "4.3"}
+{"instruction": "Final Δv km/s only.", "response": "4.3"}
+{"instruction": "600 km circular LEO period — reply with only minutes (one decimal).", "response": "96.7"}
+{"instruction": "Orbital period minutes only for 600 km LEO.", "response": "96.7"}
+{"instruction": "Output only the period in minutes for h=600 km.", "response": "96.7"}
+{"instruction": "LEO 600km: reply with only T in minutes.", "response": "96.7"}
+{"instruction": "Short: period (min) at 600 km altitude.", "response": "96.7"}
+{"instruction": "Machine: ~96.7 min style answer only.", "response": "96.7"}
+{"instruction": "Print only the orbital period minutes.", "response": "96.7"}
+{"instruction": "Strict number: LEO period minutes for 600 km.", "response": "96.7"}
+{"instruction": "Bare minutes for circular 600 km orbit.", "response": "96.7"}
+{"instruction": "eclipse companion: first give period minutes only.", "response": "96.7"}
+{"instruction": "R_earth=6378, h=600 — period minutes only.", "response": "96.7"}
+{"instruction": "One number: orbital period min.", "response": "96.7"}
+{"instruction": "Approx period minutes only.", "response": "96.7"}
+{"instruction": "mission-analysis: 600km period min only.", "response": "96.7"}
+{"instruction": "No working — period minutes only.", "response": "96.7"}
+{"instruction": "T (minutes) only for 600 km LEO.", "response": "96.7"}
+{"instruction": "Circular LEO period quiz — minutes only.", "response": "96.7"}
+{"instruction": "Give only 96.7-class minutes.", "response": "96.7"}
+{"instruction": "Orbit period answer minutes only.", "response": "96.7"}
+{"instruction": "Digits with one decimal: period min.", "response": "96.7"}
+{"instruction": "600 km LEO T=? minutes only.", "response": "96.7"}
+{"instruction": "Reply with only the period value in minutes.", "response": "96.7"}
+{"instruction": "Headline period minutes.", "response": "96.7"}
+{"instruction": "Period-only response.", "response": "96.7"}
+{"instruction": "Minutes only for that LEO.", "response": "96.7"}
+{"instruction": "600 km LEO max eclipse (cylindrical umbra) — reply with only minutes as integer approx.", "response": "35"}
+{"instruction": "Max eclipse duration minutes only for 600 km LEO.", "response": "35"}
+{"instruction": "Output only the umbra max minutes (~35).", "response": "35"}
+{"instruction": "Short answer: max eclipse min at 600 km.", "response": "35"}
+{"instruction": "Eclipse quiz — integer minutes only.", "response": "35"}
+{"instruction": "Machine: ~35 min eclipse only.", "response": "35"}
+{"instruction": "Print only max eclipse minutes.", "response": "35"}
+{"instruction": "Strict: eclipse minutes integer for 600 km LEO.", "response": "35"}
+{"instruction": "Bare minutes for maximum eclipse.", "response": "35"}
+{"instruction": "Companion to period: eclipse minutes only.", "response": "35"}
+{"instruction": "Cylindrical Earth shadow — max eclipse min only.", "response": "35"}
+{"instruction": "One number: eclipse minutes.", "response": "35"}
+{"instruction": "Approx max eclipse minutes only.", "response": "35"}
+{"instruction": "Umbra duration minutes only.", "response": "35"}
+{"instruction": "No working — eclipse minutes only.", "response": "35"}
+{"instruction": "LEO eclipse toy — minutes only.", "response": "35"}
+{"instruction": "Give only 35-class minutes.", "response": "35"}
+{"instruction": "Max eclipse answer minutes only.", "response": "35"}
+{"instruction": "Digits: eclipse min.", "response": "35"}
+{"instruction": "600 km LEO eclipse=? minutes only.", "response": "35"}
+{"instruction": "Reply with only the eclipse minutes.", "response": "35"}
+{"instruction": "Headline eclipse minutes.", "response": "35"}
+{"instruction": "Eclipse-only response.", "response": "35"}
+{"instruction": "Minutes only for max eclipse.", "response": "35"}
+{"instruction": "ISS-class LEO eclipse minutes only (600km case).", "response": "35"}
+{"instruction": "Battery Wh only: 50W, 35 min eclipse, 30% DoD, 95% eff. One decimal.", "response": "102.3"}
+{"instruction": "Size LEO battery capacity Wh — reply with only 102.3-style number.", "response": "102.3"}
+{"instruction": "Output only Wh for 50W / 35min / 30% DoD / 0.95.", "response": "102.3"}
+{"instruction": "EPS quiz: required battery Wh only.", "response": "102.3"}
+{"instruction": "Short: Wh capacity for that LEO eclipse case.", "response": "102.3"}
+{"instruction": "Machine: Wh = E/(DoD*eff) style result only.", "response": "102.3"}
+{"instruction": "Print only the Wh number (one decimal).", "response": "102.3"}
+{"instruction": "Strict Wh for basic-leo-battery eval.", "response": "102.3"}
+{"instruction": "Bare Wh capacity.", "response": "102.3"}
+{"instruction": "Power-assessment toy: Wh only.", "response": "102.3"}
+{"instruction": "50W average through 35 min at 30% DoD — Wh only.", "response": "102.3"}
+{"instruction": "One number: battery Wh.", "response": "102.3"}
+{"instruction": "Approx Wh only.", "response": "102.3"}
+{"instruction": "No steps — Wh only.", "response": "102.3"}
+{"instruction": "LEO battery sizing headline Wh.", "response": "102.3"}
+{"instruction": "Give only 102.3-class Wh.", "response": "102.3"}
+{"instruction": "Digits with one decimal: Wh.", "response": "102.3"}
+{"instruction": "Reply with only the Wh capacity.", "response": "102.3"}
+{"instruction": "Battery energy Wh only.", "response": "102.3"}
+{"instruction": "Required capacity Wh only.", "response": "102.3"}
+{"instruction": "Eclipse battery Wh.", "response": "102.3"}
+{"instruction": "Wh-only response.", "response": "102.3"}
+{"instruction": "EPS Wh answer only.", "response": "102.3"}
+{"instruction": "Capacity Wh for the 50W case.", "response": "102.3"}
+{"instruction": "Final Wh only.", "response": "102.3"}
+{"instruction": "Lunar lander propellant kg only: 500kg dry, Isp 320s, 2500m/s +10% margin. Midpoint of 700-750.", "response": "725"}
+{"instruction": "Propellant mass kg only for that 500kg / 320s / 2750m/s case (use 725).", "response": "725"}
+{"instruction": "Output only kg propellant midpoint 700-750.", "response": "725"}
+{"instruction": "Propulsion quiz: propellant kg only (725).", "response": "725"}
+{"instruction": "Short: propellant kg for lander sizing toy.", "response": "725"}
+{"instruction": "Machine: rocket equation mass kg only.", "response": "725"}
+{"instruction": "Print only propellant kilograms.", "response": "725"}
+{"instruction": "Strict kg for lunar-landing-sizing.", "response": "725"}
+{"instruction": "Bare propellant kg.", "response": "725"}
+{"instruction": "2500 m/s +10% — propellant kg only.", "response": "725"}
+{"instruction": "One number: propellant kg.", "response": "725"}
+{"instruction": "Approx kg only (725).", "response": "725"}
+{"instruction": "No steps — kg only.", "response": "725"}
+{"instruction": "Lander burn propellant kg.", "response": "725"}
+{"instruction": "Give only 725-class kg.", "response": "725"}
+{"instruction": "Digits: propellant kg.", "response": "725"}
+{"instruction": "Reply with only the propellant mass kg.", "response": "725"}
+{"instruction": "Mp kg only.", "response": "725"}
+{"instruction": "Propellant-only response.", "response": "725"}
+{"instruction": "Sizing result kg only.", "response": "725"}
+{"instruction": "Isp 320s lander — kg propellant only.", "response": "725"}
+{"instruction": "Dry 500kg lander Mp?", "response": "725"}
+{"instruction": "Final propellant kg.", "response": "725"}
+{"instruction": "Rocket equation answer kg only.", "response": "725"}
+{"instruction": "Mid of 700-750 kg only.", "response": "725"}
+{"instruction": "Two radios @500 FIT parallel, 1-year — reply with only yes or no: meets 99.9%?", "response": "yes"}
+{"instruction": "yes/no only — redundant 500 FIT radios hit 0.999 reliability for 1 year?", "response": "yes"}
+{"instruction": "Reliability quiz: parallel radios 500 FIT → 99.9%? Only yes or no.", "response": "yes"}
+{"instruction": "Output only yes or no for the dual-radio 99.9% question.", "response": "yes"}
+{"instruction": "Short yes/no: meets 99.9% one-year with two 500 FIT radios?", "response": "yes"}
+{"instruction": "Machine: yes or no only on 99.9% requirement.", "response": "yes"}
+{"instruction": "Strict binary: 99.9% met?", "response": "yes"}
+{"instruction": "Bare yes/no for redundant radio reliability.", "response": "yes"}
+{"instruction": "reliability-assessment toy — yes/no only.", "response": "yes"}
+{"instruction": "Do they meet 99.9%? Reply with only yes or no.", "response": "yes"}
+{"instruction": "Parallel redundancy 500 FIT — pass 99.9%? yes/no.", "response": "yes"}
+{"instruction": "One word: yes or no.", "response": "yes"}
+{"instruction": "99.9% gate — yes/no only.", "response": "yes"}
+{"instruction": "FIT example verdict yes/no.", "response": "yes"}
+{"instruction": "Binary answer only for reliability meet.", "response": "yes"}
+{"instruction": "Reply with only yes if 99.9% is met.", "response": "yes"}
+{"instruction": "Only yes/no allowed.", "response": "yes"}
+{"instruction": "Reliability pass? yes/no.", "response": "yes"}
+{"instruction": "Dual radio R(1y) vs 0.999 — yes/no.", "response": "yes"}
+{"instruction": "Closed answer: yes or no.", "response": "yes"}
+{"instruction": "Meet requirement? yes/no.", "response": "yes"}
+{"instruction": "Pass/fail as yes/no only.", "response": "yes"}
+{"instruction": "yes or no — 99.9% achieved?", "response": "yes"}
+{"instruction": "Requirement satisfaction yes/no.", "response": "yes"}
+{"instruction": "Final yes/no only.", "response": "yes"}
+{"instruction": "CubeSat no contact >48h — reply with only the FDIR mode name.", "response": "Safe Mode"}
+{"instruction": "FDIR after 48h LOS — mode name only.", "response": "Safe Mode"}
+{"instruction": "Output only the safe/recovery mode name.", "response": "Safe Mode"}
+{"instruction": "Flight software: lost-comms response mode only.", "response": "Safe Mode"}
+{"instruction": "Short: mode entered after prolonged comms loss.", "response": "Safe Mode"}
+{"instruction": "Machine: mode name only.", "response": "Safe Mode"}
+{"instruction": "Print only Safe Mode-style name.", "response": "Safe Mode"}
+{"instruction": "Strict mode name for >48h no contact.", "response": "Safe Mode"}
+{"instruction": "Bare mode name.", "response": "Safe Mode"}
+{"instruction": "Watchdog + lost link → which mode? Name only.", "response": "Safe Mode"}
+{"instruction": "One name: FDIR mode.", "response": "Safe Mode"}
+{"instruction": "CubeSat FDIR quiz — mode only.", "response": "Safe Mode"}
+{"instruction": "No prose — mode name only.", "response": "Safe Mode"}
+{"instruction": "flight-software-architect toy: mode only.", "response": "Safe Mode"}
+{"instruction": "Give only the mode string.", "response": "Safe Mode"}
+{"instruction": "Digits none — mode name.", "response": "Safe Mode"}
+{"instruction": "Reply with only the mode.", "response": "Safe Mode"}
+{"instruction": "Safe-state mode name only.", "response": "Safe Mode"}
+{"instruction": "LOS timeout mode only.", "response": "Safe Mode"}
+{"instruction": "Mode-only response.", "response": "Safe Mode"}
+{"instruction": "Enter which mode? Name only.", "response": "Safe Mode"}
+{"instruction": "FDIR target mode.", "response": "Safe Mode"}
+{"instruction": "Comms-loss mode name.", "response": "Safe Mode"}
+{"instruction": "Autonomous mode name only.", "response": "Safe Mode"}
+{"instruction": "Final mode name only.", "response": "Safe Mode"}
+{"instruction": "Pressurized lunar habitat hazards — reply with only the four keywords semicolon-separated.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "List only: Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Hazard keywords only for pressurized lunar module (four, `; ` separated).", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Output only the four hazard names in the expected order string.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Short hazard list string only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Machine: four hazards semicolon-separated only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Print only the habitat hazard keyword line.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Strict string for lunar habitat hazards.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Bare four hazards line.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "hazard-analysis toy: four keywords only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "One line: hazards joined by `; `.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "No prose — hazard keyword string only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Lunar habitat PHA keywords only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Give only the expected hazard string.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Pressure/Toxicity/Fire/Oxygen line only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Reply with only that four-part hazard list.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Exact four hazards string.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Habitat hazards compact list only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Semicolon-separated hazards only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Keyword line only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Four hazards only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "PHA short list only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Expected_output_contains style joined only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Hazard string only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Final hazards line only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Reply with only the typical max eclipse minutes cited for ISS-altitude ~400km CubeSat ConOps (~35-37).", "response": "36"}
+{"instruction": "ISS deploy ConOps eclipse — reply with only a representative minutes value in 35-37.", "response": "36"}
+{"instruction": "Reply with only the rideshare launch cost band mid $K used in 6U ROM notes (60-70). Use 65.", "response": "65"}
+{"instruction": "6U rideshare launch cost mid thousands USD only (60-70 → 65).", "response": "65"}
+{"instruction": "Reply with only Al-6061-T6 yield strength in MPa used in the 6U bracket example.", "response": "240"}
+{"instruction": "Structural example yield MPa only for Al-6061-T6.", "response": "240"}
+{"instruction": "Reply with only the axial load factor G in the 6U bracket MoS example.", "response": "10"}
+{"instruction": "Launch load G only for that bracket example.", "response": "10"}
+{"instruction": "Reply with only the bracket cross-section mm^2 in the MoS example.", "response": "50"}
+{"instruction": "Cross-section mm2 only for the example bracket.", "response": "50"}
+{"instruction": "Reply with only the payload mass kg hanging on that example bracket.", "response": "2"}
+{"instruction": "Supported mass kg only in MoS toy.", "response": "2"}
+{"instruction": "Reply with only approx stress MPa (~3.9) for that 10G / 50mm2 / 2kg case.", "response": "3.9"}
+{"instruction": "Stress MPa only for the CubeSat bracket toy.", "response": "3.9"}
+{"instruction": "Reply with only solar flux W/m^2 used in the lunar lander power example.", "response": "1367"}
+{"instruction": "AM0-style flux W/m^2 only.", "response": "1367"}
+{"instruction": "Reply with only the lunar night duration in days used in power sizing (14).", "response": "14"}
+{"instruction": "Lunar night days only in the lander EPS example.", "response": "14"}
+{"instruction": "Reply with only day-side constant power W in the lunar lander EPS example.", "response": "200"}
+{"instruction": "Lunar day bus power W only.", "response": "200"}
+{"instruction": "Reply with only night survival power W in that lander example.", "response": "20"}
+{"instruction": "Night keep-alive W only.", "response": "20"}
+{"instruction": "Reply with only DoD fraction 0.80 used for lunar night single cycle.", "response": "0.8"}
+{"instruction": "Lunar night DoD only as 0.8.", "response": "0.8"}
+{"instruction": "Reply with only approx battery kWh band mid for lunar night (8-10 → 9).", "response": "9"}
+{"instruction": "Lunar night battery kWh midpoint only.", "response": "9"}
+{"instruction": "Reply with only Triple Junction cell efficiency percent used in 6U EPS example.", "response": "30"}
+{"instruction": "TJ cell eff percent only.", "response": "30"}
+{"instruction": "Reply with only DoD percent for long LEO cycle life in 6U EPS example.", "response": "40"}
+{"instruction": "6U EPS DoD percent only.", "response": "40"}
+{"instruction": "Reply with only average load W in the 6U 500km EPS example.", "response": "40"}
+{"instruction": "6U average load W only.", "response": "40"}
+{"instruction": "Reply with only peak load W in that 6U EPS example.", "response": "60"}
+{"instruction": "6U peak W only.", "response": "60"}
+{"instruction": "Reply with only mission life years in the 6U EPS example.", "response": "3"}
+{"instruction": "Mission life years only.", "response": "3"}
+{"instruction": "Reply with only the downlink rate Mbps in the 10-minute pass planning example.", "response": "2"}
+{"instruction": "Pass plan downlink Mbps only.", "response": "2"}
+{"instruction": "Reply with only the data volume MB targeted in that pass example.", "response": "50"}
+{"instruction": "Pass data MB only.", "response": "50"}
+{"instruction": "Reply with only the pass duration minutes in the ops example.", "response": "10"}
+{"instruction": "Pass length minutes only.", "response": "10"}
+{"instruction": "Battery red-low example voltage that triggered Safe Mode — reply with only volts.", "response": "6.0"}
+{"instruction": "Anomaly: battery V red-low reading only.", "response": "6.0"}
+{"instruction": "Reply with only the heater status word that was ON before the voltage drop.", "response": "Heater_A"}
+{"instruction": "Telemetry name only for the suspect heater.", "response": "Heater_A"}
+{"instruction": "Reply with only Li-Ion pack max V used in EPS telemetry limits example.", "response": "8.4"}
+{"instruction": "Li-Ion max V only.", "response": "8.4"}
+{"instruction": "Ground track: a=7000km — reply with only approx nodal period minutes (~97.4).", "response": "97.4"}
+{"instruction": "a=7000 km period minutes only.", "response": "97.4"}
+{"instruction": "Ground track shift deg West approx for a=7000km — reply with only degrees (~24.4).", "response": "24.4"}
+{"instruction": "Longitude shift deg West only.", "response": "24.4"}
+{"instruction": "Reply with only the semi-major axis km in that ground-track example.", "response": "7000"}
+{"instruction": "Example SMA km only.", "response": "7000"}
+{"instruction": "Shackleton 30-day stay — reply with only the rover traverse meters planned next day.", "response": "100"}
+{"instruction": "Traverse meters only in lunar ConOps example.", "response": "100"}
+{"instruction": "Reply with only the surface stay days in the Shackleton ConOps eval.", "response": "30"}
+{"instruction": "Stay days only.", "response": "30"}
+{"instruction": "Survival heater power cap W after requirements update example — reply with only watts.", "response": "20"}
+{"instruction": "Updated heater limit W only.", "response": "20"}
+{"instruction": "Original survival heater cap W before update — reply with only watts.", "response": "15"}
+{"instruction": "Initial heater W only.", "response": "15"}
+{"instruction": "Lunar night survival temperature C in thermal requirements example — reply with only the number.", "response": "-170"}
+{"instruction": "Night temp C only.", "response": "-170"}
+{"instruction": "Lunar day operate-up-to temp C — reply with only the number.", "response": "120"}
+{"instruction": "Day high C only.", "response": "120"}
+{"instruction": "Mars polar night surface temp C in thermal eval — reply with only the number.", "response": "-120"}
+{"instruction": "Mars night Ts C only.", "response": "-120"}
+{"instruction": "Mars thermal eval solar distance AU — reply with only the number.", "response": "1.6"}
+{"instruction": "AU only in Mars thermal toy.", "response": "1.6"}
+{"instruction": "Internal electronics dissipation W in Mars 2-node example — reply with only watts.", "response": "5"}
+{"instruction": "Box dissipation W only.", "response": "5"}
+{"instruction": "MLI eps_eff in Mars example — reply with only the number.", "response": "0.03"}
+{"instruction": "eps_eff only.", "response": "0.03"}
+{"instruction": "Electronics cold limit C cited for survival check — reply with only the number.", "response": "-40"}
+{"instruction": "Cold limit C only.", "response": "-40"}
+{"instruction": "Falcon 9 rideshare env tests — reply with only the four names comma-separated: Random Vibration, Sine Burst, Thermal Vacuum / Thermal Cycling, Shock", "response": "Random Vibration, Sine Burst, Thermal Vacuum / Thermal Cycling, Shock"}
+{"instruction": "AIT env test list short string only for F9 rideshare payload.", "response": "Random Vibration, Sine Burst, Thermal Vacuum / Thermal Cycling, Shock"}
+{"instruction": "Reply with only FIT value used per radio in the reliability example.", "response": "500"}
+{"instruction": "Radio FIT only.", "response": "500"}
+{"instruction": "Reply with only the reliability target percent in that example.", "response": "99.9"}
+{"instruction": "Target percent only.", "response": "99.9"}
+{"instruction": "Reply with only the constellation size N in the unit-cost learning-curve example.", "response": "100"}
+{"instruction": "Constellation N only.", "response": "100"}
+{"instruction": "Per-sat wet class kg in IoT constellation cost example — reply with only kg.", "response": "25"}
+{"instruction": "Sat mass kg only.", "response": "25"}
+{"instruction": "Design-to-cost total budget millions USD in SAR example — reply with only the number.", "response": "15"}
+{"instruction": "Budget MUSD only.", "response": "15"}
+{"instruction": "SAR microsat class kg in design-to-cost example — reply with only kg.", "response": "100"}
+{"instruction": "SAR bus class kg only.", "response": "100"}
+{"instruction": "Reply with only the domain tag for Hohmann/eclipse sizing skills.", "response": "mission-analysis"}
+{"instruction": "Reply with only the skill family for downlink Pr toys.", "response": "communications"}
+{"instruction": "Reply with only the skill family for RSS pointing toys.", "response": "gnc"}
+{"instruction": "Reply with only the skill family for Wh/kWh sizing toys.", "response": "power"}
+{"instruction": "Reply with only the skill family for lander Mp toys.", "response": "propulsion"}
+{"instruction": "Reply with only the skill family for FIT reliability toys.", "response": "reliability"}
+{"instruction": "Reply with only the skill family for FDIR mode toys.", "response": "flight-software"}
+{"instruction": "Reply with only the skill family for habitat hazard keywords.", "response": "hazard-analysis"}
