@@ -2,76 +2,59 @@
 
 Check in order. Analysis: [logs/WHY_GOOD_WHY_BAD.md](logs/WHY_GOOD_WHY_BAD.md) · Readable report: [logs/REPORT_2026-07-16.md](logs/REPORT_2026-07-16.md) · Run path: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
 
-**Status snapshot:** CPU v4 → LoRA **`exact_match = 1.000`** (base 0.200). Mac first run (36-row) = **0.200**. Mac pulled v4 then hit **HF ConnectTimeout**. PR #6 + #7 are on `main` — finish Mac with offline Hub env.
+**Status snapshot:** **Mac MPS v4 + CPU v4** both **`exact_match = 1.000`** LoRA vs base **0.200**. Week holdout goal met.
 
 ---
 
 ## A. Ship / sync
 
-- [x] Merge PR #1–#7 into `main`
-- [ ] On Mac: `git pull` (includes v4 + HF fallback)
+- [x] Merge PR #1–#8 into `main`
+- [ ] On Mac (when GitHub reachable): `git pull` to get updated report
 
 ---
 
 ## B. Mac local run
 
-- [x] First Mac `./run_next.sh` on **36-row** pack → LoRA = base **0.200** (mps OK)
-- [x] Pull v4 (`train_rows: 450`) — then HF tokenizer timeout
-- [ ] Finish v4 with offline cache (or retry Hub):
-
-```bash
-cd ~/polar-lab
-git checkout main && git pull
-export HF_HUB_OFFLINE=1
-export TRANSFORMERS_OFFLINE=1
-./run_next.sh
-open logs/LATEST_RUN_REPORT.md
-```
-
-- [ ] Confirm device `mps` + `train_rows: 450`
-- [ ] Log row in `logs/week_01.md`
-- [ ] Compare vs CPU v4 **1.000** / old baseline **0.200**
+- [x] First Mac run (36-row) → **0.200**
+- [x] Pull v4; HF timeout once; then offline Hub retry
+- [x] Mac v4 `./run_next.sh` → LoRA **1.000** / base **0.200** (mps, ~7 min, train_loss ≈ 1.16)
+- [x] `train_rows: 450` confirmed
+- [ ] When online: `git pull` + open `logs/REPORT_2026-07-16.md`
+- [x] Compare vs baseline 0.200 / CPU 1.000 — **matched CPU**
 
 ---
 
 ## C. Fix what is NOT good (data first)
 
-- [x] Expand short-fact paraphrases (train **36 → 79 → 450**)
-- [x] Align eval prompts to ask for short answers (still disjoint)
-- [x] Bump `configs/machina_sft.yaml` to `max_steps: 400`
-- [x] CPU retrain + holdout on v4 → **`exact_match = 1.000`**
-- [ ] Mac / GPU confirm on v4
-- [x] Target ≥ 0.60 and ≥ base + 0.20 (hit on CPU)
+- [x] Expand short-fact pack to **450** rows
+- [x] `max_steps: 400`
+- [x] CPU v4 → **1.000**
+- [x] Mac v4 → **1.000**
+- [x] Target ≥ 0.60 and ≥ base + 0.20
 - [x] Do not jump to 1.5B until bar moves (bar moved)
 
 ---
 
 ## D. Keep what is already good
 
-- [x] Pipeline: data → LoRA SFT → holdout eval
+- [x] Pipeline end-to-end
 - [x] Train/eval overlap = 0
 - [x] `outputs/` gitignored
-- [x] Washed Machina data (not raw Slack)
-- [ ] Each Mac run: `python scripts/check_data.py` after data edits
+- [x] Washed Machina data
 - [ ] Never commit `outputs/`
 
 ---
 
 ## E. Codex CI
 
-Docs: [docs/CODEX_CI.md](docs/CODEX_CI.md)
-
-- [x] Workflow + prompt on `main`
-- [x] Enable checklist documented
-- [ ] You: secret **`OPENAI_API_KEY`**
-- [ ] You: variable **`ENABLE_CODEX_CI`** = `true`
-- [ ] Confirm Actions: hygiene + dry-run + `codex inspector`
+- [x] Docs + workflow on `main`
+- [ ] Optional: `OPENAI_API_KEY` + `ENABLE_CODEX_CI=true`
 
 ---
 
 ## F. Done looks like
 
-1. Mac `./run_next.sh` on **v4** + report  
-2. Week log updated  
-3. Holdout ≥ 0.60 — **CPU already 1.000**  
+1. [x] Mac `./run_next.sh` on v4 + local `LATEST_RUN_REPORT.md`  
+2. [x] Holdout ≥ 0.60 — **1.000 on Mac and CPU**  
+3. [ ] Week log row committed (this PR)  
 4. Codex CI optional  

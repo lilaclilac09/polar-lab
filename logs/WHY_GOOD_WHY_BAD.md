@@ -7,7 +7,7 @@
 |------|---------------|-------------:|-------------:|
 | v2/v3 short-fact | 36–79 / 120–200 | **0.200** | 0.200 |
 | Mac MPS (old main ~36) | 36 / 120 | **0.200** | 0.200 |
-| **v4** identical short golds | **450 / 400** | **1.000** | 0.200 |
+| **v4** identical short golds | **450 / 400** | **1.000** (cpu + **mps**) | 0.200 |
 
 **Update:** v4 proves the diagnosis — volume of *identical short answers* was the missing piece. Arithmetic demo earlier hit `0.667` (2/3).
 

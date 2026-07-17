@@ -50,14 +50,15 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-16 | `machina_sft.yaml` short-fact v3 (79 rows) | 200 | cpu | 79 | 1.81 | 1.17 | **0.200** (2/10); base also 0.200; near-misses closer |
 | 2026-07-16 | Mac MPS, old main short-fact (~36 rows) | 120 | mps | 36 | ~2.38 | ~1.48 | **0.200** (2/10) = base; only yes/no hits |
 | 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | **1.16** | **0.69** | **LoRA 1.000** / base **0.200** (Δ +0.800) |
+| 2026-07-17 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | **mps** | 450 | **1.16** | **0.70** | **LoRA 1.000** / base **0.200** (Δ +0.800); HF offline |
 
-Reading: **v4 worked.** Hundreds of identical short golds + 400 steps → holdout perfect on CPU; base still 0.200. Mac first run used the old 36-row pack — pull PR #6 and re-run. See [TODO.md](../TODO.md).
+Reading: **v4 worked on CPU and Mac MPS.** Same 10/10 holdout; base still 0.200. See [REPORT_2026-07-16.md](REPORT_2026-07-16.md).
 
 ## Next week
 
-1. Mac `./run_next.sh` on v4 (confirm `train_rows: 450`, expect score ≫ 0.20)
-2. Optional softer metric for long answers; keep exact_match for short golds
-3. Enable Codex CI only if you set `OPENAI_API_KEY` + `ENABLE_CODEX_CI`
+1. Optional: softer metric for long answers; keep exact_match for short golds
+2. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
+3. Only then consider larger base models if you outgrow 0.5B
 
 ## Links
 
