@@ -56,9 +56,10 @@ Reading: **v4 worked on CPU and Mac MPS.** Same 10/10 holdout; base still 0.200.
 
 ## Next week
 
-1. Optional: softer metric for long answers; keep exact_match for short golds
-2. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
-3. Only then consider larger base models if you outgrow 0.5B
+1. Optional: run space pack — `POLAR_CONFIG=configs/space_sft.yaml ./run_next.sh`
+2. Optional: softer metric for long answers; keep exact_match for short golds
+3. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
+4. Only then consider larger base models if you outgrow 0.5B
 
 ## Links
 
