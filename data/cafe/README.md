@@ -4,8 +4,10 @@ Washed **2026-07-22** from fresh `lilaclilac09/aileen_machina_01` commits (Cafe 
 
 | File | Rows | Role |
 |------|-----:|------|
-| `sft_train.jsonl` | ~286 | Short-gold paraphrases |
+| `sft_train.jsonl` | **554** | Short-gold paraphrases (miss-boosted) |
 | `sft_eval.jsonl` | 10 | Holdout (disjoint) |
+
+CPU holdout (2026-07-22): LoRA **0.700** / base **0.100** — see [REPORT_CAFE_2026-07-22.md](../../logs/REPORT_CAFE_2026-07-22.md).
 
 ## Provenance (new info)
 

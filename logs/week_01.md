@@ -52,15 +52,17 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | **1.16** | **0.69** | **LoRA 1.000** / base **0.200** (Δ +0.800) |
 | 2026-07-17 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | **mps** | 450 | **1.16** | **0.70** | **LoRA 1.000** / base **0.200** (Δ +0.800); HF offline |
 | 2026-07-22 | `space_sft.yaml` space short-fact v1→v2 | 300→400 | cpu | 348→**498** | **1.32** | — | **LoRA 0.500** / base **0.000** (Δ +0.500); see [REPORT_SPACE_2026-07-22.md](REPORT_SPACE_2026-07-22.md) |
+| 2026-07-22 | `cafe_sft.yaml` cafe/SEMIS (286→**554**) | 300→**360** | cpu | 286→**554** | **1.15** | — | **LoRA 0.700** / base **0.100** (Δ +0.600); useful YES; see [REPORT_CAFE_2026-07-22.md](REPORT_CAFE_2026-07-22.md) |
 
-Reading: **v4 worked on CPU and Mac MPS.** Space pack moves vs base but sticky at 0.500 on brittle numbers. See [REPORT_2026-07-16.md](REPORT_2026-07-16.md).
+Reading: **v4 worked on CPU and Mac MPS.** Space pack moves vs base but sticky at 0.500 on brittle numbers. Cafe/SEMIS crossed useful bar after miss boost. See [REPORT_2026-07-16.md](REPORT_2026-07-16.md).
 
 ## Next week
 
-1. Mac space pack run / more short golds for space number misses
-2. Optional: softer numeric metric for space only; keep exact_match for Machina
-3. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
-4. Only then consider larger base models if you outgrow 0.5B
+1. Mac cafe + space pack confirm (HF offline)
+2. Push space number misses / cafe near-misses (`Cafe Cursor Shanghai`, `contact panel`, trailing `/`)
+3. Optional: softer numeric metric for space only; keep exact_match for Machina
+4. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
+5. Only then consider larger base models if you outgrow 0.5B
 
 ## Links
 

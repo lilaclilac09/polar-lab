@@ -24,14 +24,14 @@ open logs/LATEST_RUN_REPORT.md
 
 See [data/space/README.md](../data/space/README.md).
 
-**Cafe / SEMIS pack** (washed 2026-07-22 from `aileen_machina_01` Cafe Cursor + tools hub):
+**Cafe / SEMIS pack** (washed 2026-07-22 from `aileen_machina_01` Cafe Cursor + tools hub; CPU **0.700**):
 
 ```bash
 POLAR_CONFIG=configs/cafe_sft.yaml ./run_next.sh
 open logs/LATEST_RUN_REPORT.md
 ```
 
-See [data/cafe/README.md](../data/cafe/README.md).
+See [data/cafe/README.md](../data/cafe/README.md) · [REPORT_CAFE_2026-07-22.md](../logs/REPORT_CAFE_2026-07-22.md).
 
 Useful flags:
 
