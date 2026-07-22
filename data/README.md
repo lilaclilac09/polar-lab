@@ -9,6 +9,7 @@ Training and holdout JSONL for LoRA SFT / DPO. **English only.**
 | `sft_train.jsonl` | Washed Q&A from `lilaclilac09/aileen_machina_01` (second-brain memory docs + Centaur research note) | Not raw Slack; **v4 ≈ 450** short-fact paraphrases (identical golds for paths/names) |
 | `sft_eval.jsonl` | Same domain, **disjoint** prompts | Never used in SFT training |
 | **`space/`** | Washed from `lilaclilac09/space-engineering-skills` evals | Separate domain pack — see [space/README.md](space/README.md); config `configs/space_sft.yaml` |
+| **`cafe/`** | Washed 2026-07-22 from `aileen_machina_01` (Cafe Cursor + SEMIS/tools/contact) | See [cafe/README.md](cafe/README.md); config `configs/cafe_sft.yaml` |
 | `dpo_train.jsonl` | Preference pairs (memory vs weight dump) | Enable with `dpo.enabled: true` |
 | `rl_prompts.jsonl` | Tiny RL scaffold prompts | Optional |
 | `demo/` | Original arithmetic/hello smoke set | Kept for regression |

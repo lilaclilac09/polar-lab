@@ -1,49 +1,35 @@
 # Polar Lab — TODO
 
-Check in order. Reports: [REPORT_2026-07-16.md](logs/REPORT_2026-07-16.md) · [REPORT_SPACE_2026-07-22.md](logs/REPORT_SPACE_2026-07-22.md) · Run: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
+Reports: [REPORT_2026-07-16.md](logs/REPORT_2026-07-16.md) · [REPORT_SPACE_2026-07-22.md](logs/REPORT_SPACE_2026-07-22.md) · Run: [docs/NEXT_RUN.md](docs/NEXT_RUN.md)
 
-**Status:** Machina v4 = **1.000** (CPU+Mac). Space pack CPU = LoRA **0.500** / base **0.000** (Δ +0.500; useful bar not yet).
-
----
-
-## A. Ship / sync
-
-- [x] PR #1–#10 on `main` (incl. space pack files)
-- [ ] Merge space CPU-run report PR; Mac `git pull`
+**Status:** Machina **1.000** · Space **0.500** · New **cafe/SEMIS** pack (~286/10) from 2026-07-22 Machina commits — pending train.
 
 ---
 
-## B. Mac
+## Packs
 
-- [x] Machina v4 → **1.000**
-- [ ] Space pack:
+| Pack | Path | Train/eval | Config | Holdout |
+|------|------|------------|--------|---------|
+| Machina | `data/sft_*.jsonl` | 450/10 | `machina_sft.yaml` | **1.000** |
+| Space | `data/space/` | 498/10 | `space_sft.yaml` | **0.500** |
+| **Cafe/SEMIS** | `data/cafe/` | **286/10** | `cafe_sft.yaml` | pending |
 
 ```bash
-cd ~/polar-lab && git pull
-export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
-POLAR_CONFIG=configs/space_sft.yaml ./run_next.sh
-open logs/LATEST_RUN_REPORT.md
+# Cafe / SEMIS (new)
+POLAR_CONFIG=configs/cafe_sft.yaml ./run_next.sh
 ```
 
 ---
 
-## C. Domains
+## C. Next
 
-- [x] Machina short-fact v4
-- [x] Space wash + CPU run (348→**498** train, 400 steps) → **0.500**
-- [ ] Push space holdout ≥ **0.60** (more golds for number misses / optional soft numeric)
-- [ ] Keep packs separate unless intentional mix
-
----
-
-## D. Hygiene
-
-- [x] `check_data.py --train/--eval` · space overlap 0
-- [ ] Never commit `outputs/`
+- [ ] CPU/Mac train cafe pack → target ≥ 0.60
+- [ ] Push space number misses toward ≥ 0.60
+- [ ] Optional Codex CI secrets
 
 ---
 
 ## E. Codex CI
 
-- [x] Docs + workflow on `main`
-- [ ] Optional: `OPENAI_API_KEY` + `ENABLE_CODEX_CI=true`
+- [x] Docs + workflow
+- [ ] `OPENAI_API_KEY` + `ENABLE_CODEX_CI=true`
