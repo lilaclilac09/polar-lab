@@ -1,0 +1,10 @@
+{"instruction": "Reply with only the public URL for Cafe Cursor credit redeem.", "response": "https://cursor-cafe.aileena.xyz/"}
+{"instruction": "Reply with only the event name for the Shanghai Cursor credits cafe.", "response": "Cafe Cursor Shanghai"}
+{"instruction": "Reply with only the Aileena tools hub path.", "response": "/tools"}
+{"instruction": "Reply with only the registry tag for Chip Guess on the tools hub.", "response": "SEMIS"}
+{"instruction": "Reply with only the default Cafe Cursor redeem mode.", "response": "allowlist"}
+{"instruction": "Door-day Luma sync — reply with only the admin button name that clears then imports checked-in guests.", "response": "Clear + Sync Checked-in"}
+{"instruction": "Reply with only yes or no: should visitors use a public personal email on the site to reach Aileen?", "response": "no"}
+{"instruction": "Where should visitors leave contact for Aileen? Reply with only the UI place name.", "response": "contact panel"}
+{"instruction": "Reply with only the SemiAnalysis site URL used on Aileena channels.", "response": "https://www.semianalysis.com"}
+{"instruction": "Reply with only the Cafe Cursor tools-hub status (live or tbc).", "response": "live"}
