@@ -51,13 +51,14 @@ Four lines: **#train=10**, **#holdout=3**, **steps=40**, **exact_match≈0.67**.
 | 2026-07-16 | Mac MPS, old main short-fact (~36 rows) | 120 | mps | 36 | ~2.38 | ~1.48 | **0.200** (2/10) = base; only yes/no hits |
 | 2026-07-16 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | cpu | 450 | **1.16** | **0.69** | **LoRA 1.000** / base **0.200** (Δ +0.800) |
 | 2026-07-17 | `machina_sft.yaml` short-fact v4 (450 rows) | 400 | **mps** | 450 | **1.16** | **0.70** | **LoRA 1.000** / base **0.200** (Δ +0.800); HF offline |
+| 2026-07-22 | `space_sft.yaml` space short-fact v1→v2 | 300→400 | cpu | 348→**498** | **1.32** | — | **LoRA 0.500** / base **0.000** (Δ +0.500); see [REPORT_SPACE_2026-07-22.md](REPORT_SPACE_2026-07-22.md) |
 
-Reading: **v4 worked on CPU and Mac MPS.** Same 10/10 holdout; base still 0.200. See [REPORT_2026-07-16.md](REPORT_2026-07-16.md).
+Reading: **v4 worked on CPU and Mac MPS.** Space pack moves vs base but sticky at 0.500 on brittle numbers. See [REPORT_2026-07-16.md](REPORT_2026-07-16.md).
 
 ## Next week
 
-1. Optional: run space pack — `POLAR_CONFIG=configs/space_sft.yaml ./run_next.sh`
-2. Optional: softer metric for long answers; keep exact_match for short golds
+1. Mac space pack run / more short golds for space number misses
+2. Optional: softer numeric metric for space only; keep exact_match for Machina
 3. Optional: enable Codex CI (`OPENAI_API_KEY` + `ENABLE_CODEX_CI`)
 4. Only then consider larger base models if you outgrow 0.5B
 
