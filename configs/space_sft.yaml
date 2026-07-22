@@ -33,7 +33,7 @@ sft:
   save_steps: 100
   eval_steps: 100
   warmup_ratio: 0.03
-  max_steps: 300
+  max_steps: 400
   packing: false
 dpo:
   enabled: false

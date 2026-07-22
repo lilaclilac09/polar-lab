@@ -5,8 +5,7 @@ Washed from [lilaclilac09/space-engineering-skills](https://github.com/lilaclila
 
 | File | Rows | Role |
 |------|-----:|------|
-| `sft_train.jsonl` | ~348 | Paraphrases + extra numeric facts |
-| `sft_eval.jsonl` | 10 | Holdout (disjoint prompts) |
+| `sft_train.jsonl` / `sft_eval.jsonl` | ~**498** / **10** | Paraphrases + miss boost (CPU holdout LoRA **0.500**) |
 
 ## Provenance
 

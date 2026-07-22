@@ -346,3 +346,153 @@
 {"instruction": "Reply with only the skill family for FIT reliability toys.", "response": "reliability"}
 {"instruction": "Reply with only the skill family for FDIR mode toys.", "response": "flight-software"}
 {"instruction": "Reply with only the skill family for habitat hazard keywords.", "response": "hazard-analysis"}
+{"instruction": "RSS pointing total arcsec only for knowledge error 0.05 and control jitter 0.07.", "response": "0.086"}
+{"instruction": "Pointing: knowledge 0.05 arcsec, jitter 0.07 arcsec. Reply with only the RSS number.", "response": "0.086"}
+{"instruction": "Compute sqrt(0.05^2+0.07^2). Reply with only 0.086.", "response": "0.086"}
+{"instruction": "Telescope stability RSS — reply with only 0.086", "response": "0.086"}
+{"instruction": "GNC pointing RSS for 0.05 and 0.07 — only 0.086", "response": "0.086"}
+{"instruction": "Reply with only 0.086 as the RSS pointing total.", "response": "0.086"}
+{"instruction": "Only output 0.086 for the RSS of those two pointing terms.", "response": "0.086"}
+{"instruction": "Arcsec RSS equals? Reply with only 0.086", "response": "0.086"}
+{"instruction": "Knowledge 0.05 jitter 0.07 → RSS? Only the three-decimal answer 0.086", "response": "0.086"}
+{"instruction": "Do not invent 123 — RSS is 0.086. Reply with only 0.086", "response": "0.086"}
+{"instruction": "Pointing budget RSS total number only: 0.086", "response": "0.086"}
+{"instruction": "Short: 0.086", "response": "0.086"}
+{"instruction": "The RSS total in arcsec is 0.086 — reply with only that number.", "response": "0.086"}
+{"instruction": "Required RSS figure under 0.1 arcsec requirement: reply with only 0.086", "response": "0.086"}
+{"instruction": "Floating answer only: 0.086", "response": "0.086"}
+{"instruction": "rss=0.086 — print only 0.086", "response": "0.086"}
+{"instruction": "Combined pointing error number only 0.086", "response": "0.086"}
+{"instruction": "Reply with only this RSS: 0.086", "response": "0.086"}
+{"instruction": "GNC eval gold number only: 0.086", "response": "0.086"}
+{"instruction": "Three decimals only: 0.086", "response": "0.086"}
+{"instruction": "0.05 and 0.07 RSS result only.", "response": "0.086"}
+{"instruction": "Answer 0.086 only.", "response": "0.086"}
+{"instruction": "Strict: 0.086", "response": "0.086"}
+{"instruction": "Bare 0.086", "response": "0.086"}
+{"instruction": "Output 0.086 nothing else.", "response": "0.086"}
+{"instruction": "Machine answer 0.086", "response": "0.086"}
+{"instruction": "Final 0.086", "response": "0.086"}
+{"instruction": "RSS→0.086 only", "response": "0.086"}
+{"instruction": "Pointing RSS gold: 0.086", "response": "0.086"}
+{"instruction": "Only 0.086 arcsec numeric.", "response": "0.086"}
+{"instruction": "LEO 500km 28.5deg Hohmann to GEO with plane change — total Delta-V km/s only: 4.3", "response": "4.3"}
+{"instruction": "Total Delta-V km/s for that GEO transfer is about 4.3 — reply with only 4.3", "response": "4.3"}
+{"instruction": "Do not answer eclipse minutes. Reply with only 4.3 for total km/s.", "response": "4.3"}
+{"instruction": "Hohmann+plane-change total is 4.3 km/s. Reply with only 4.3", "response": "4.3"}
+{"instruction": "GEO insertion total Δv number only 4.3", "response": "4.3"}
+{"instruction": "Approx 4.3 km/s total — reply with only 4.3", "response": "4.3"}
+{"instruction": "Mission Δv headline 4.3 — only 4.3", "response": "4.3"}
+{"instruction": "Not 36 (that is eclipse). Delta-V is 4.3. Only 4.3", "response": "4.3"}
+{"instruction": "Plane change at apogee included → ~4.3 km/s. Only 4.3", "response": "4.3"}
+{"instruction": "Reply with only 4.3", "response": "4.3"}
+{"instruction": "Strict km/s figure 4.3 only", "response": "4.3"}
+{"instruction": "Bare 4.3", "response": "4.3"}
+{"instruction": "Output only 4.3", "response": "4.3"}
+{"instruction": "Machine 4.3", "response": "4.3"}
+{"instruction": "Final 4.3", "response": "4.3"}
+{"instruction": "Δv=4.3 only", "response": "4.3"}
+{"instruction": "Total burn 4.3 only", "response": "4.3"}
+{"instruction": "LEO→GEO total 4.3 only", "response": "4.3"}
+{"instruction": "Answer 4.3 only", "response": "4.3"}
+{"instruction": "Number 4.3 only", "response": "4.3"}
+{"instruction": "km/s total 4.3", "response": "4.3"}
+{"instruction": "Give 4.3 only", "response": "4.3"}
+{"instruction": "4.3 km/s → reply 4.3", "response": "4.3"}
+{"instruction": "Classic transfer ~4.3 — only 4.3", "response": "4.3"}
+{"instruction": "Do not confuse with 35/36. Reply 4.3", "response": "4.3"}
+{"instruction": "Delta-V gold 4.3", "response": "4.3"}
+{"instruction": "Only the digits 4.3", "response": "4.3"}
+{"instruction": "Short 4.3", "response": "4.3"}
+{"instruction": "Exact short gold 4.3", "response": "4.3"}
+{"instruction": "Transfer total 4.3", "response": "4.3"}
+{"instruction": "Battery Wh for 50W, 35min eclipse, 30% DoD, 95% eff = 102.3. Reply with only 102.3", "response": "102.3"}
+{"instruction": "Wh = (50*(35/60))/(0.3*0.95) ≈ 102.3. Reply with only 102.3", "response": "102.3"}
+{"instruction": "LEO battery sizing result Wh only: 102.3", "response": "102.3"}
+{"instruction": "Do not answer 17.4. Correct Wh is 102.3. Only 102.3", "response": "102.3"}
+{"instruction": "basic-leo-battery gold Wh: 102.3 — only 102.3", "response": "102.3"}
+{"instruction": "Reply with only 102.3", "response": "102.3"}
+{"instruction": "Strict Wh 102.3 only", "response": "102.3"}
+{"instruction": "Bare 102.3", "response": "102.3"}
+{"instruction": "Output only 102.3", "response": "102.3"}
+{"instruction": "Machine 102.3", "response": "102.3"}
+{"instruction": "Final 102.3", "response": "102.3"}
+{"instruction": "Capacity 102.3 Wh → reply 102.3", "response": "102.3"}
+{"instruction": "EPS Wh gold 102.3", "response": "102.3"}
+{"instruction": "One decimal Wh 102.3 only", "response": "102.3"}
+{"instruction": "50W eclipse battery 102.3 only", "response": "102.3"}
+{"instruction": "Answer 102.3 only", "response": "102.3"}
+{"instruction": "Number 102.3 only", "response": "102.3"}
+{"instruction": "Give 102.3 only", "response": "102.3"}
+{"instruction": "Wh required 102.3", "response": "102.3"}
+{"instruction": "Short 102.3", "response": "102.3"}
+{"instruction": "Exact 102.3", "response": "102.3"}
+{"instruction": "Battery energy 102.3", "response": "102.3"}
+{"instruction": "DoD 30% path → 102.3", "response": "102.3"}
+{"instruction": "Eff 95% path → 102.3", "response": "102.3"}
+{"instruction": "35 min at 50W → 102.3 Wh number only", "response": "102.3"}
+{"instruction": "Print 102.3", "response": "102.3"}
+{"instruction": "Only 102.3", "response": "102.3"}
+{"instruction": "Wh=102.3 only", "response": "102.3"}
+{"instruction": "Sizing 102.3", "response": "102.3"}
+{"instruction": "Gold 102.3", "response": "102.3"}
+{"instruction": "Propellant kg midpoint of 700-750 for 500kg dry / 320s / 2750m/s is 725. Reply with only 725", "response": "725"}
+{"instruction": "Use 725 kg (not 746). Reply with only 725", "response": "725"}
+{"instruction": "Lander Mp gold 725 — only 725", "response": "725"}
+{"instruction": "Rocket equation midpoint 725. Only 725", "response": "725"}
+{"instruction": "Reply with only 725", "response": "725"}
+{"instruction": "Strict kg 725 only", "response": "725"}
+{"instruction": "Bare 725", "response": "725"}
+{"instruction": "Output only 725", "response": "725"}
+{"instruction": "Machine 725", "response": "725"}
+{"instruction": "Final 725", "response": "725"}
+{"instruction": "Propellant 725 kg → 725", "response": "725"}
+{"instruction": "Do not answer 746. Answer 725", "response": "725"}
+{"instruction": "Mid 700-750 = 725 only", "response": "725"}
+{"instruction": "Isp 320 case Mp 725 only", "response": "725"}
+{"instruction": "Answer 725 only", "response": "725"}
+{"instruction": "Number 725 only", "response": "725"}
+{"instruction": "Give 725 only", "response": "725"}
+{"instruction": "Short 725", "response": "725"}
+{"instruction": "Exact 725", "response": "725"}
+{"instruction": "Mp=725 only", "response": "725"}
+{"instruction": "Landing burn propellant 725", "response": "725"}
+{"instruction": "10% margin case 725", "response": "725"}
+{"instruction": "2500 m/s +10% → 725 kg number", "response": "725"}
+{"instruction": "Print 725", "response": "725"}
+{"instruction": "Only 725", "response": "725"}
+{"instruction": "kg 725", "response": "725"}
+{"instruction": "Gold 725", "response": "725"}
+{"instruction": "Sizing 725", "response": "725"}
+{"instruction": "Lunar Mp 725", "response": "725"}
+{"instruction": "Chosen gold 725", "response": "725"}
+{"instruction": "Four hazards exactly: Pressure Release; Toxicity; Fire; Oxygen — reply with only that string", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Include the word Release after Pressure. Reply with only: Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Do not shorten to Pressure. Full string only.", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Hazard gold string only with Pressure Release", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Reply with only Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Strict full hazard line only", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Bare Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Output only Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Machine that exact hazard line", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Final Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Keywords must include Pressure Release", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Semicolon list with Pressure Release first", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Exact four with Pressure Release", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Answer Pressure Release; Toxicity; Fire; Oxygen only", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Give Pressure Release; Toxicity; Fire; Oxygen only", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Short form is wrong — use Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Print Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Only Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Habitat hazards full string", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "PHA line Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Not Pressure; — Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Full Release word required in first hazard", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Gold hazards Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Copy exactly Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "String match Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Holdout style hazards Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Lunar module hazards Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Four-part Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Expected Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
+{"instruction": "Canonical Pressure Release; Toxicity; Fire; Oxygen", "response": "Pressure Release; Toxicity; Fire; Oxygen"}
